@@ -2,6 +2,7 @@ import React from 'react';
 import ProductsApiService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 import ProductListItem from '../../Components/ProductListItems/ProductListItems'
+import Navigation from '../../Components/Navigation/Navigation'
 
 
 export default class ProductsListPage extends React.Component{
@@ -30,10 +31,12 @@ export default class ProductsListPage extends React.Component{
     }
 
     render(){
-        return (
-                <section> 
-                    {this.renderProductsList()}
-                </section>
+        return (<div>
+                    <Navigation />
+                    <section> 
+                        {this.renderProductsList()}
+                    </section>
+                </div>
             
         )
     }

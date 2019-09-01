@@ -1,0 +1,9 @@
+.product_item_container{
+    display: inline-block;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    border: black solid 1px;
+    width: 30%;
+    font-size: 12px;
+    margin: 5px;
+}

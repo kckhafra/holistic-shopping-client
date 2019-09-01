@@ -7,6 +7,8 @@ import Home from '../../routes/Home/Home'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import ProductsListPage from '../../routes/ProductsListPage/ProductsListPage'
 import ProductPage from '../../routes/ProductPage/ProductPage';
+import AddProductPage from '../../routes/AddProductPage/AddProductPage'
+
 class App extends React.Component {
   
 
@@ -28,8 +30,14 @@ class App extends React.Component {
           path={'/productsListPage'}
           component={ProductsListPage}/>
         <Route 
-        path={'/product/:productId'}
-        component={ProductPage}/>
+          path={'/product/:productId'}
+          component={ProductPage}/>
+        <Route 
+          path={'/addProduct'}
+          component={AddProductPage}
+        />
+       
+        
       </main>
     </div>
   );

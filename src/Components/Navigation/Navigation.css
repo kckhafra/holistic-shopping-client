@@ -1,0 +1,16 @@
+.Nav{
+    border: black solid 1px;
+    background-color: rgb(43, 192, 100);
+    background-size: cover;
+    height: 70px;
+    
+    
+}
+
+a.nav-links{
+    text-decoration: none;
+    color: black;
+    float: right;
+    padding: 5px;
+    
+}
