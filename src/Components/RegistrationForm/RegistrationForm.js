@@ -1,10 +1,20 @@
 import React from 'react'
 import AuthApiService from '../../services/auth-api-service'
+// const bcrypt = require('bcryptjs')
+
 
 export default class RegistrationForm extends React.Component{
     handleRegisterSubmit = (ev)=>{
         ev.preventDefault()
         const {full_name, email, user_name, password} = ev.target
+        // const hashPassword = bcrypt.hash(password.value, 12)
+        //     .then((hash)=>{
+        //         return {hash}
+        //     })
+            
+            
+        // console.log(hashPassword)
+        
         AuthApiService.postUser({
             full_name: full_name.value,
             email: email.value,

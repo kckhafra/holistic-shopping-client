@@ -8,7 +8,7 @@ export default class ProductListItems extends React.Component{
         const {product} = this.props
         
         return(
-            <div class="product_item_container">
+            <div className="product_item_container">
                 <div>
                 <Link to={`/product/${product.id}`}>
                     <header className='ProductItem_header'>

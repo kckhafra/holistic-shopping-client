@@ -1,5 +1,5 @@
 .home_nav_container{
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 .home_nav{
@@ -7,5 +7,13 @@
     margin: 20px;
     font-size: 30px;
     text-decoration: none;
-    color: black
+    color: black;
+    height: 30px;
+    background-color: rgb(252, 186, 65);
+    font-weight: bolder;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.img-container{
+    margin-top: 80px;
 }
