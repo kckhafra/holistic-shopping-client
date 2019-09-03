@@ -1,7 +1,7 @@
 import React from 'react'
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
-
+import './LoginForm.css'
 
 export default class LoginForm extends React.Component{
    static defaultProps = {
@@ -54,7 +54,9 @@ export default class LoginForm extends React.Component{
                         {error && <p className='error'>{error}</p>}
                     </div>
                     <div className='user_name'>
-                    <label htmlFor='LoginForm__user_name'>
+                    <label 
+                        className="log_label label_username"
+                        htmlFor='LoginForm__user_name'>
                         User name
                     </label>
                     <input
@@ -65,7 +67,9 @@ export default class LoginForm extends React.Component{
                     </input>
                     </div>
                     <div className='password'>
-                    <label htmlFor='LoginForm__password'>
+                    <label 
+                        className="log_label label_password"
+                        htmlFor='LoginForm__password'>
                         Password
                     </label>
                     <input
@@ -75,10 +79,13 @@ export default class LoginForm extends React.Component{
                         id='LoginForm__password'>
                     </input>
                     </div>
-                    <button type='submit'>
+                    <button 
+                        className="log_button log_button1"
+                        type='submit'>
                     Login
                     </button>
                     <button 
+                        className="log_button log_button2"
                         type='button'
                         onClick={this.handleCancel}
                     >

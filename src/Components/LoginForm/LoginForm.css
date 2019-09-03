@@ -1,0 +1,33 @@
+.error{
+    color: red;
+}
+
+.label_password{
+    margin-right: 14px;
+}
+
+.log_label{
+    padding-right: 10px;
+    
+}
+
+button{
+    margin-top: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    height: 30px;
+    background-color: rgb(252, 186, 65);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.log_button2{
+    margin-left: 15px;
+}
+
+input{
+    background-color: rgb(207, 209, 224);
+    margin: 5px;
+    width: 150px;
+    height: 20px;
+    border: 1px orange solid;
+    }

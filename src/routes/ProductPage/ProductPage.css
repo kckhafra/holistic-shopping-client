@@ -1,0 +1,12 @@
+.prod_button2{
+    margin-left: 15px;
+}
+.prodpage_container{
+    display: inline-block;
+    border: black solid 1px;
+    width: 30%;
+    font-size: 12px;
+    margin: 5px;
+    padding: 10px;
+    margin-top: 50px;
+}

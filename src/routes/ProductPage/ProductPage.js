@@ -2,6 +2,7 @@ import React from 'react';
 import productsApiServices from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
 import Navigation from '../../Components/Navigation/Navigation'
+import './ProductPage.css'
 
 const uuid = require('uuid');
 
@@ -33,20 +34,24 @@ export default class ProductPage extends React.Component{
         return(
             <div>
                 <Navigation />
+                <h2>Buy Product or Service</h2>
                 <div >
                     {product.map((product, index)=>{
                     
                         return(
                         <div key={uuid}>
-                            <h2>{product.service_name}</h2>
-                            <p>{product.description}</p>
-                            <p>Price: <span>{`$${product.price}`}</span></p>
-                            <button>Buy</button>
-                            <button 
-                            onClick={this.handleCancelClick}
-                            type="button">
-                                Cancel
-                            </button>
+                            <div className="prodpage_container">
+                                <h2>{product.service_name}</h2>
+                                <p>{product.description}</p>
+                                <p>Price: <span>{`$${product.price}`}</span></p>
+                                <button>Buy</button>
+                                <button
+                                className="prod_button2" 
+                                onClick={this.handleCancelClick}
+                                type="button">
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
                             )
                     })}

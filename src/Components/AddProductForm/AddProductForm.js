@@ -1,7 +1,9 @@
+import './AddProductForm.css';
 import React from 'react'
 import ProductService from '../../services/products-api-services'
 import {withRouter} from 'react-router-dom';
 import TokenService from '../../services/token-service'
+
 
 
 
@@ -41,9 +43,12 @@ class AddProductPage extends React.Component{
     render(){
         return(
             <div>
+                <h2>Sale Product/Service</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label htmlFor='add_service_name'>
+                    <div className="input_container">
+                        <label 
+                            className="label_addprod label_prodname"
+                            htmlFor='add_service_name'>
                             Product/Service Name
                         </label>
                         <input
@@ -52,8 +57,10 @@ class AddProductPage extends React.Component{
                             id='add_service_name'>
                         </input>
                     </div>
-                    <div>
-                        <label htmlFor='add_price'>
+                    <div className="input_container">
+                        <label 
+                            className="label_addprod label_price"
+                            htmlFor='add_price'>
                             Price
                         </label>
                         <input
@@ -62,8 +69,10 @@ class AddProductPage extends React.Component{
                             id='add_price'>
                         </input>
                     </div>
-                    <div>
-                        <label htmlFor='add_inventory_amount'>
+                    <div className="input_container">
+                        <label 
+                            className="label_addprod label_inventory"
+                            htmlFor='add_inventory_amount'>
                             Inventory Amount
                         </label>
                         <input
@@ -72,8 +81,10 @@ class AddProductPage extends React.Component{
                             id='add_inventory_amount'>
                         </input>
                     </div>
-                    <div>
-                        <label htmlFor='add_description'>
+                    <div className="input_container">
+                        <label 
+                            className="label_addprod label_description"
+                            htmlFor='add_description'>
                             Description and Health Benefits
                         </label>
                         <input
@@ -82,10 +93,13 @@ class AddProductPage extends React.Component{
                             id='add_description'>
                         </input>
                     </div>
-                    <div>
-                        <label htmlFor='add_category'>
+                    <div className="input_container">
+                        <label 
+                            className="label_addprod label_category"
+                            htmlFor='add_category'>
                             Category
                         </label>
+                        
                         <select name="category">
                             <option default value='Tea'>Tea</option>
                             <option value='Pills'>Pills</option>
@@ -94,16 +108,22 @@ class AddProductPage extends React.Component{
                             <option value='Body-care'>Body-care</option>
                             <option value='Recipes'>Recipes</option>
                         </select>
+                        
                     </div>
-                    <button type='submit'>
+                    <div className="button_container">
+                    <button 
+                        className="add_button add_button1"
+                        type='submit'>
                         Submit
                     </button>
                     <button 
+                        className="add_button add_button2"
                         type='button'
                         onClick={this.handleCancelClick}
                     >
                         Cancel
                     </button>
+                    </div>
                 </form>
             </div>
 

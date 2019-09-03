@@ -1,0 +1,13 @@
+.login-container{
+    text-align: center;
+    margin-top: 100px;
+    border: lightgray solid .5px;
+    width: 300px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_title{
+    text-align: center;
+}

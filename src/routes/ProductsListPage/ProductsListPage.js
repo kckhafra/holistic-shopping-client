@@ -33,6 +33,7 @@ export default class ProductsListPage extends React.Component{
     render(){
         return (<div>
                     <Navigation />
+                    <h2>Products for Sale</h2>
                     <section> 
                         {this.renderProductsList()}
                     </section>

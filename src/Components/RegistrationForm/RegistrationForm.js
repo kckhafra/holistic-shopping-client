@@ -1,19 +1,14 @@
 import React from 'react'
 import AuthApiService from '../../services/auth-api-service'
-// const bcrypt = require('bcryptjs')
+import './RegistrationForm.css'
+
 
 
 export default class RegistrationForm extends React.Component{
     handleRegisterSubmit = (ev)=>{
         ev.preventDefault()
         const {full_name, email, user_name, password} = ev.target
-        // const hashPassword = bcrypt.hash(password.value, 12)
-        //     .then((hash)=>{
-        //         return {hash}
-        //     })
-            
-            
-        // console.log(hashPassword)
+       
         
         AuthApiService.postUser({
             full_name: full_name.value,
@@ -22,6 +17,8 @@ export default class RegistrationForm extends React.Component{
             password: password.value,
         })
         .then(user=>{
+            
+            
             full_name.value=''
             email.value=''
             user_name.value=''
@@ -41,8 +38,10 @@ export default class RegistrationForm extends React.Component{
                 className='RegistrationForm'
                 onSubmit={this.handleRegisterSubmit}
             >
-                <div className='full_name'>
-                    <label htmlFor='RegistrationForm_full_name' >
+                <div className='input_container full_name'>
+                    <label 
+                        className="label_reg label_fullname"
+                        htmlFor='RegistrationForm_full_name' >
                         Full name
                     </label>
                     <input
@@ -53,8 +52,10 @@ export default class RegistrationForm extends React.Component{
                     >
                     </input>
                 </div>
-                <div className='email'>
-                    <label htmlFor='email' >
+                <div className='input_container email'>
+                    <label 
+                        className="label_reg label_email"
+                        htmlFor='RegistrationForm_email' >
                         Email
                     </label>
                     <input
@@ -65,8 +66,10 @@ export default class RegistrationForm extends React.Component{
                     >
                     </input>
                 </div>
-                <div className='user_name'>
-                    <label htmlFor='RegistrationForm_user_name' >
+                <div className='input_container user_name'>
+                    <label 
+                        className="label_reg label_username"
+                        htmlFor='RegistrationForm_user_name' >
                         User Name
                     </label>
                     <input
@@ -77,8 +80,10 @@ export default class RegistrationForm extends React.Component{
                     >
                     </input>
                 </div>
-                <div className='password'>
-                    <label htmlFor='RegistrationForm_password' >
+                <div className='input_container password'>
+                    <label 
+                        className="label_reg label_password"
+                        htmlFor='RegistrationForm_password' >
                         Password
                     </label>
                     <input
@@ -89,15 +94,19 @@ export default class RegistrationForm extends React.Component{
                     >
                     </input>
                 </div>
-                <button
-                        type="submit">
-                            Submit
-                </button>
-                <button
-                    onClick={this.handleCancel}
-                    type="button">
-                            Cancel
-                </button>
+                <div className="button_container">
+                    <button
+                        className="reg_button reg_button1"
+                            type="submit">
+                                Submit
+                    </button>
+                    <button
+                        className="reg_button reg_button2"
+                        onClick={this.handleCancel}
+                        type="button">
+                                Cancel
+                    </button>
+                </div>
                 
             </form>
         )
