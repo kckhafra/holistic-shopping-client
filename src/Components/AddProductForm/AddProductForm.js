@@ -14,8 +14,6 @@ class AddProductPage extends React.Component{
      
     state = {error: null}
 
-    
-
     handleSubmit = (ev)=>{
         ev.preventDefault()
         const {service_name, price, inventory_amount, description, category} = ev.target
