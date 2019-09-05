@@ -19,15 +19,7 @@ class AddProductPage extends React.Component{
     handleSubmit = (ev)=>{
         ev.preventDefault()
         const {service_name, price, inventory_amount, description, category} = ev.target
-         const authToken = TokenService.getAuthToken()
-         const payload =(TokenService.verifyJwt(authToken))
-         const {user_id}= (payload)
-         
-          
-        
-        
         ProductService.postProduct({
-            user_id: user_id,
             service_name: service_name.value,
             price: price.value,
             remaining_inventory: inventory_amount.value,

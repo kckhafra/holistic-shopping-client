@@ -17,11 +17,7 @@ const TokenService = {
     clearAuthToken(){
         window.localStorage.removeItem(config.TOKEN_KEY)
     },
-    verifyJwt(token) {
-        return jwt.verify(token, 'kc-jwt-secret', {
-          algorithms: ['HS256'],
-        })
-      },
+   
     
 }
 
