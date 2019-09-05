@@ -9,21 +9,11 @@ To try out the app you can create you own login credentials on the registration 
 - Password: holistic
 
 ### Technologies used
-Front-end: JavaScript, React, HTML, CSS, AND API GET, POST, PATCH, DELETE REQUEST
-[Back-End](https://github.com/kckhafra/holistic-shopping-api): Node.js, jwt, PSQL. Database stored at Heroku. 
+Front-end: The front end was built with JavaScript, React, HTML, CSS, AND API GET, POST, PATCH, DELETE REQUEST
+[Back-End](https://github.com/kckhafra/holistic-shopping-api): The back-end was built with Node.js and PSQL. The login was authenticated through JSON Web Token(JWT). Database stored at Heroku. 
 
-
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+### Description
+This web app currently allows you to post products for sell, see products others post and manage your own products. 
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
