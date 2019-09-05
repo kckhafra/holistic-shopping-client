@@ -12,9 +12,7 @@ export default class ProductsListPage extends React.Component{
     componentDidMount(){
         ProductsApiService.getProducts()
             .then(this.context.setProductList)
-            .then((product)=>{
-                console.log(product)
-            })
+            
             .catch(error =>{
                 console.log({error});
             })
