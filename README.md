@@ -14,7 +14,9 @@ Front-end: The front end was built with JavaScript, React, HTML, CSS, AND API GE
 
 ### Description
 This web app currently allows you to post products for sell, see products others post and manage your own products. 
-### `npm run eject`
+
+## Login Page
+![LoginPage] (https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.46.40%20PM.png)
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
