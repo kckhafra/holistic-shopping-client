@@ -5,7 +5,7 @@ const ProductApiService = {
     getProducts(){
         return fetch(`${config.API_ENDPOINT}/products`,{
             headers: {
-                'authorization': `basic ${TokenService.getAuthToken()}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
         .then((res)=>
@@ -14,10 +14,23 @@ const ProductApiService = {
                 : res.json()
             )
     },
+    getMyProducts(){
+        
+        return fetch(`${config.API_ENDPOINT}/products/my`,{
+            
+            headers: {
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+        })
+        // .then((!res.ok)
+        //         ? res.json().then(e => Promise.reject(e))
+        //         : res.json())
+        .then((res)=>res.json())
+    },
     getProductsById(productId){
         return fetch(`${config.API_ENDPOINT}/products/${productId}`,{
             headers: {
-                'authorization': `basic ${TokenService.getAuthToken()}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
         .then((res)=>
@@ -27,11 +40,12 @@ const ProductApiService = {
             )
     },
     postProduct(newProduct){
-        console.log(newProduct)
+        
         return fetch(`${config.API_ENDPOINT}/products`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
             body: JSON.stringify(newProduct)
     })
@@ -40,7 +54,22 @@ const ProductApiService = {
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
             )
-}
+},
+    patchProduct(productId, editProduct){
+        return fetch(`${config.API_ENDPOINT}/products/${productId}`,{
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(editProduct)
+        })
+        .then((res)=>
+            (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
+            )
+    }
 }
 
 export default ProductApiService

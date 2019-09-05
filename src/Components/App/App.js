@@ -8,6 +8,10 @@ import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import ProductsListPage from '../../routes/ProductsListPage/ProductsListPage'
 import ProductPage from '../../routes/ProductPage/ProductPage';
 import AddProductPage from '../../routes/AddProductPage/AddProductPage'
+import MyProductsList from '../../routes/MyProductsList/MyProductsList'
+import MyProductItems from '../../Components/MyProductItems/MyProductItems'
+import MyProductPage from '../../routes/MyProductPage/MyProductPage'
+import EditProductForm from '../EditProductForm/EditProductForm'
 
 class App extends React.Component {
   
@@ -30,11 +34,24 @@ class App extends React.Component {
           path={'/productsListPage'}
           component={ProductsListPage}/>
         <Route 
-          path={'/product/:productId'}
+          exact path={'/product/:productId'}
           component={ProductPage}/>
         <Route 
           path={'/addProduct'}
           component={AddProductPage}
+        />
+        <Route
+          path={'/myProducts'}
+          component={MyProductsList}
+        />
+        <Route
+        exact
+          path={'/product/my/:productId'}
+          component={MyProductPage}
+        />
+        <Route 
+          path={'/edit/:productId'}
+          component={EditProductForm}
         />
        
         

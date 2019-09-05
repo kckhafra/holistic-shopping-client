@@ -22,6 +22,17 @@ export default class Navigation extends React.Component{
                     to='/addProduct'>
                     Add Product
                 </Link>
+                <Link 
+                    className="nav-links"
+                    to='/myProducts'>
+                    My Products
+                </Link>
+                <Link
+                    className="nav-links"
+                    to='/productsListPage'
+                >
+                    Products for Sale
+                </Link>
             </div>
         )
     }

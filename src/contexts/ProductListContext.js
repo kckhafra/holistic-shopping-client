@@ -4,13 +4,20 @@ import React from 'react';
  const ProductListContext =  React.createContext({
     productList: [],
     setProductList: ()=>{},
+    myProducts: [],
+    setMyProducts: ()=>{}
     
 })
 export default ProductListContext
 
 export class ProductListProvider extends React.Component{
     state = {
-        productList: [""]
+        productList: [""],
+        myProducts: [""]
+    }
+
+    setMyProducts = myProducts=>{
+        this.setState({myProducts})
     }
 
     setProductList = productList=>{
@@ -22,7 +29,9 @@ export class ProductListProvider extends React.Component{
 
         const value = {
             productList: this.state.productList,
-            setProductList: this.setProductList
+            setProductList: this.setProductList,
+            myProducts: this.state.myProducts,
+            setMyProducts:this.setMyProducts
         }
         return (
             <ProductListContext.Provider value={value}>

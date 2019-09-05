@@ -10,9 +10,10 @@ export default class LoginForm extends React.Component{
 
    state = {error: null}
     
-    handleSubmit = (ev) => {
+    handleSubmitJwtAuth = (ev) => {
         ev.preventDefault()
         const {user_name, password} = ev.target
+        this.setState({error:null})
         
 
         AuthApiService.postLogin({
@@ -21,17 +22,17 @@ export default class LoginForm extends React.Component{
         })
         
             .then(res => {
-                
-                TokenService.saveAuthToken(`${res.user_name},${res.password}`
-                  )
-                  console.log(res.user_name, res.password)
+                user_name.value = ''
+                password.value = ''
+                TokenService.saveAuthToken(res.authToken)
+
                 this.props.onLoginSuccess()
             })
             .catch(res=>{
                 this.setState({error: res.error})
             })
 
-            console.log(user_name.value, password.value)
+            
             
 
 
@@ -47,7 +48,7 @@ export default class LoginForm extends React.Component{
         const {error} = this.state
         return(
             <form
-                onSubmit={this.handleSubmit}
+                onSubmit={this.handleSubmitJwtAuth}
                 className='LoginForm'
                 >
                     <div role="alert">

@@ -1,44 +1,54 @@
-import React from 'react';
+import Config from '../../config'
+import React from 'react'
 import ProductsApiService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 import ProductListItem from '../../Components/ProductListItems/ProductListItems'
 import Navigation from '../../Components/Navigation/Navigation'
+import TokenService from '../../services/token-service'
+import MyProductItems from '../../Components/MyProductItems/MyProductItems'
 
 
-export default class ProductsListPage extends React.Component{
+const uuid = require('uuid')
+
+export default class MyProductListPage extends React.Component{
+
     
     static contextType = ProductListContext
 
     componentDidMount(){
-        ProductsApiService.getProducts()
-            .then(this.context.setProductList)
-            .then((product)=>{
-                console.log(product)
-            })
+        return ProductsApiService.getMyProducts()
+        
+        .then((products)=>{
+            this.context.setMyProducts(products)
+        })
+            
             .catch(error =>{
                 console.log({error});
             })
     }
+    
+    
+    
+    
 
-    
-    
-    
-
-    renderProductsList(){
+    renderMyProductsList(){
         
-        return this.context.productList.map(product=>
-            <ProductListItem
+        return this.context.myProducts.map(product=>
+            <MyProductItems
+                
                 key={product.id}
                 product={product}/>
+                
         )   
+        
     }
 
     render(){
         return (<div>
                     <Navigation />
-                    <h2>Products for Sale</h2>
+                    <h2>My Products</h2>
                     <section> 
-                        {this.renderProductsList()}
+                        {this.renderMyProductsList()}
                     </section>
                 </div>
             

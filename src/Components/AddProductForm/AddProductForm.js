@@ -3,6 +3,8 @@ import React from 'react'
 import ProductService from '../../services/products-api-services'
 import {withRouter} from 'react-router-dom';
 import TokenService from '../../services/token-service'
+import config from '../../config'
+
 
 
 
@@ -17,11 +19,15 @@ class AddProductPage extends React.Component{
     handleSubmit = (ev)=>{
         ev.preventDefault()
         const {service_name, price, inventory_amount, description, category} = ev.target
-        const [tokenUserName, tokenPassword] = TokenService.getAuthToken().split(',')
-        console.log(tokenUserName)
+         const authToken = TokenService.getAuthToken()
+         const payload =(TokenService.verifyJwt(authToken))
+         const {user_id}= (payload)
+         
+          
+        
         
         ProductService.postProduct({
-            user_id: tokenUserName,
+            user_id: user_id,
             service_name: service_name.value,
             price: price.value,
             remaining_inventory: inventory_amount.value,
@@ -29,7 +35,6 @@ class AddProductPage extends React.Component{
             product_category: category.value
         })
             .then((product)=>{
-                console.log(product)
                 this.props.onLoginSuccess(product)
             })
             
