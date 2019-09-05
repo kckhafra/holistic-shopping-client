@@ -10,6 +10,7 @@ To try out the app you can create you own login credentials on the registration 
 
 ### Technologies used
 Front-end: The front end was built with JavaScript, React, HTML, CSS, AND API GET, POST, PATCH, DELETE REQUEST
+<div>
 [Back-End](https://github.com/kckhafra/holistic-shopping-api): The back-end was built with Node.js and PSQL. The login was authenticated through JSON Web Token(JWT). Database stored at Heroku. 
 
 ### Description
