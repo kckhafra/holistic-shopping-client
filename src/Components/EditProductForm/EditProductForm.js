@@ -1,17 +1,22 @@
 import React from 'react';
 import ProductsService from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
+const uuid = require ('uuid')
+
+ 
 
 export default class EditReact extends React.Component{
     state = {
         service_name: "",
         price: 1,
-        inventory_amount: 1,
+        remaining_inventory: 1,
         description: "",
-        category: "",
+        product_category: "",
 
     }
     static contextType = ProductContext
+
+    
    
     componentDidMount(){
         const {productId} = this.props.match.params
@@ -22,9 +27,9 @@ export default class EditReact extends React.Component{
                 this.setState({ 
                     service_name: prod.service_name,
                     price: prod.price,
-                    inventory_amount: prod.remaining_inventory,
+                    remaining_inventory: prod.remaining_inventory,
                     description: prod.description,
-                    category: prod.product_category,
+                    product_category: prod.product_product_category,
                 })
             })
             
@@ -33,6 +38,10 @@ export default class EditReact extends React.Component{
                 console.log({error})
             })   
     }
+
+    
+    
+
     handleChangeService = e =>{
         this.setState({service_name: e.target.value})
     }
@@ -41,20 +50,23 @@ export default class EditReact extends React.Component{
         this.setState({price: e.target.value})
     }
     handleChangeInventory = e =>{
-        this.setState({inventory_amount: e.target.value})
+        this.setState({remaining_inventory: e.target.value})
     }
     handleChangeDescription = e =>{
         this.setState({description: e.target.value})
     }
     handleChangeCategory = e =>{
-        this.setState({category: e.target.value})
+        this.setState({product_category: e.target.value})
+        
     }
 
     handleSubmit = (e)=>{
         e.preventDefault()
+        console.log(this.state.product_category)
         const {productId} = this.props.match.params
-        const {service_name, price, inventory_amount, description, category} = this.state
-        const editedProducts = {service_name, price, inventory_amount, description, category}
+        const {service_name, price, remaining_inventory, description, product_category} = this.state
+        const editedProducts = {service_name, price, remaining_inventory, description, product_category}
+        console.log(editedProducts)
         ProductsService.patchProduct(
             productId,
             editedProducts
@@ -80,17 +92,32 @@ export default class EditReact extends React.Component{
         this.setState({
           service_name: newFields.service_name || '',
           price: newFields.price || '',
-          inventory_amount: newFields.inventory_amount || '',
+          remaining_inventory: newFields.remaining_inventory || '',
           description: newFields.description || '',
-          category: newFields.category || '',
+          product_category: newFields.product_category || '',
         })
       }
 
     handleCancelClick = ()=>{
         this.props.history.goBack()
     }
+
+    
+    
+
+    gernerateOptionsHTML(){
+        return ['Tea','Pills','Counselling','Plant-based','Body-care','Recipes'].map((categ, uuid) => {
+            if (categ === this.state.product_category) {
+              return <option selected key={uuid} value={categ}>{categ}</option>
+            }
+            return <option key={uuid} value={categ}>{categ}</option>
+          })
+            }
+            
+
     render(){
-        const {service_name, price, inventory_amount, description, category} = this.state
+        const options = this.gernerateOptionsHTML()
+        const {service_name, price, remaining_inventory, description} = this.state
         return(
             <div>
                 <h2>Edit Product</h2>
@@ -127,15 +154,15 @@ export default class EditReact extends React.Component{
                     <div className="input_container">
                         <label 
                             className="label_addprod label_inventory"
-                            htmlFor='add_inventory_amount'>
+                            htmlFor='add_remaining_inventory'>
                             Inventory Amount
                         </label>
                         <input
                             onChange={this.handleChangeInventory}
                             required
-                            name='inventory_amount'
-                            id='add_inventory_amount'
-                            value={inventory_amount}>
+                            name='remaining_inventory'
+                            id='add_remaining_inventory'
+                            value={remaining_inventory}>
                         </input>
                     </div>
                     <div className="input_container">
@@ -154,20 +181,15 @@ export default class EditReact extends React.Component{
                     </div>
                     <div className="input_container">
                         <label 
-                            className="label_addprod label_category"
-                            htmlFor='add_category'>
-                            Category
+                            className="label_addprod label_product_category"
+                            htmlFor='add_product_category'>
+                            product_category
                         </label>
                         
                         <select 
                         onChange={this.handleChangeCategory}
-                        name="category">
-                            <option value='Tea'>Tea</option>
-                            <option default value='Pills'>Pills</option>
-                            <option value='Counseling'>Counseling</option>
-                            <option value='Plant-based'>Plant-based</option>
-                            <option value='Body-care'>Body-care</option>
-                            <option value='Recipes'>Recipes</option>
+                        name="product_category">
+                            {options}
                         </select>
                         
                     </div>
