@@ -10,48 +10,24 @@ To try out the app you can create you own login credentials on the registration 
 
 ### Technologies used
 Front-end: The front end was built with JavaScript, React, HTML, CSS, AND API GET, POST, PATCH, DELETE REQUEST
+
 [Back-End](https://github.com/kckhafra/holistic-shopping-api): The back-end was built with Node.js and PSQL. The login was authenticated through JSON Web Token(JWT). Database stored at Heroku. 
 
 ### Description
-This web app currently allows you to post products for sell, see products others post and manage your own products. 
+This web app currently allows you to post products for sell and see products others post. You can also manage your own products by either editing or deleting your product. All products are stored in a database created by PSQL.  
+
+## Home Page
+![Login Page](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.46.40%20PM.png)
+
+## Registration Page
+![Registration Page](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.50.25%20PM.png)
 
 ## Login Page
-![LoginPage] (https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.46.40%20PM.png)
+![Login Page](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.50.39%20PM.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Sale Product Form
+![Sale Product Form](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.51.52%20PM.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Manage Product
+![Manage Product](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%206.57.59%20PM.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
