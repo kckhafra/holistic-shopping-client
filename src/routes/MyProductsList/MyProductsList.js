@@ -7,7 +7,6 @@ import Navigation from '../../Components/Navigation/Navigation'
 import TokenService from '../../services/token-service'
 import MyProductItems from '../../Components/MyProductItems/MyProductItems'
 
-
 const uuid = require('uuid')
 
 export default class MyProductListPage extends React.Component{
@@ -35,8 +34,7 @@ export default class MyProductListPage extends React.Component{
         
         return this.context.myProducts.map(product=>
             <MyProductItems
-                
-                key={product.id}
+                key={uuid}
                 product={product}/>
                 
         )   

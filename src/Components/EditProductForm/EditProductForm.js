@@ -62,11 +62,9 @@ export default class EditReact extends React.Component{
 
     handleSubmit = (e)=>{
         e.preventDefault()
-        console.log(this.state.product_category)
         const {productId} = this.props.match.params
         const {service_name, price, remaining_inventory, description, product_category} = this.state
         const editedProducts = {service_name, price, remaining_inventory, description, product_category}
-        console.log(editedProducts)
         ProductsService.patchProduct(
             productId,
             editedProducts

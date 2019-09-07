@@ -3,7 +3,7 @@ import ProductsApiService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 import ProductListItem from '../../Components/ProductListItems/ProductListItems'
 import Navigation from '../../Components/Navigation/Navigation'
-
+const uuid = require('uuid')
 
 export default class ProductsListPage extends React.Component{
     
@@ -26,7 +26,7 @@ export default class ProductsListPage extends React.Component{
         
         return this.context.productList.map(product=>
             <ProductListItem
-                key={product.id}
+                key={uuid}
                 product={product}/>
         )   
     }
