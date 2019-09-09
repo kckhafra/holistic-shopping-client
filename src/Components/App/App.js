@@ -9,7 +9,7 @@ import ProductsListPage from '../../routes/ProductsListPage/ProductsListPage'
 import ProductPage from '../../routes/ProductPage/ProductPage';
 import AddProductPage from '../../routes/AddProductPage/AddProductPage'
 import MyProductsList from '../../routes/MyProductsList/MyProductsList'
-import MyProductItems from '../../Components/MyProductItems/MyProductItems'
+
 import MyProductPage from '../../routes/MyProductPage/MyProductPage'
 import EditProductForm from '../EditProductForm/EditProductForm'
 
@@ -20,6 +20,7 @@ class App extends React.Component {
   return (
     <div className="App">
       <main>
+        
         <Route 
           exact
           path={'/'}
@@ -53,6 +54,7 @@ class App extends React.Component {
           path={'/edit/:productId'}
           component={EditProductForm}
         />
+        
        
         
       </main>
