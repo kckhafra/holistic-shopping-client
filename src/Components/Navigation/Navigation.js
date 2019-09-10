@@ -3,29 +3,104 @@ import {Link} from 'react-router-dom'
 import TokenService from '../../services/token-service';
 import './Navigation.css'
 
+
 export default class Navigation extends React.Component{
+    state = {
+        showMenu: false,
+    };
+
+    showMenu = (event)=>{
+        event.preventDefault();
+        
+        this.setState({ showMenu: true }, () => {
+          document.addEventListener('click', this.closeMenu);
+        });
+      }
+      
+      closeMenu = (e)=>{
+        e.preventDefault();
+        this.setState({ showMenu: false }, () => {
+          document.removeEventListener('click', this.closeMenu);
+        });
+        
+      }
     
+
+
     handleLogoutButton = ()=>{
         TokenService.clearAuthToken()
     }
 
     renderLogoutLink(){
         return(
-            <div className='Nav'>
-                <Link className="nav-links"
-                    onClick={this.handleLogoutButton}
+            <div>
+                <div className='Nav-dropdown'>
+                <button 
+                    onClick={this.showMenu}
+                    className="nav-icon"
+                    >
+                    <div className="bar1"></div>
+                    <div className="bar2"></div>
+                    <div className="bar3"></div>
+                </button>
+                
+                {
+                    this.state.showMenu 
+                    ? (
+                        <div><div
+                            className="menu"
+                            ref={(element) => {
+                            this.dropdownMenu = element;
+                            }}
+                        >
+                            
+                        </div>
+                        <section className="dropdown-container">
+                        <Link className="navlinks-dropdown"
+                            onClick={this.handleLogoutButton}
+                            to='/'>
+                            Logout
+                        </Link>
+                        
+                        <Link 
+                            className="navlinks-dropdown"
+                            to='/addProduct'>
+                            Add Product
+                        </Link>
+                        <Link 
+                            className="navlinks-dropdown"
+                            to='/myProducts'>
+                            My Products
+                        </Link>
+                        <Link
+                            className="navlinks-dropdown"
+                            to='/productsListPage'
+                        >
+                            Products for Sale
+                        </Link>
+                        </section>
+                        </div>
+                     ) 
+                     : (
+                         null
+                     )
+                }
+            </div>
+            <div className="Nav">
+                <Link 
+                    className="nav-links"
                     to='/'>
-                    Logout
+                        Logout
                 </Link>
                 <Link 
                     className="nav-links"
                     to='/addProduct'>
-                    Add Product
+                        Add Product
                 </Link>
                 <Link 
                     className="nav-links"
                     to='/myProducts'>
-                    My Products
+                        My Products
                 </Link>
                 <Link
                     className="nav-links"
@@ -33,6 +108,8 @@ export default class Navigation extends React.Component{
                 >
                     Products for Sale
                 </Link>
+            </div>
+            
             </div>
         )
     }
