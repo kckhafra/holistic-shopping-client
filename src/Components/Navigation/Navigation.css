@@ -24,7 +24,7 @@ a.nav-links{
   }
   
 
-@media (max-width: 750px){
+@media (max-width: 800px){
     a.navlinks-dropdown{
     margin-top: 50px;
     display: block;
