@@ -3,6 +3,8 @@ import ProductsApiService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 import ProductListItem from '../../Components/ProductListItems/ProductListItems'
 import Navigation from '../../Components/Navigation/Navigation'
+import {Link} from 'react-router-dom'
+import "./ProductsListPage.css"
 const uuid = require('uuid')
 
 export default class ProductsListPage extends React.Component{
@@ -34,7 +36,22 @@ export default class ProductsListPage extends React.Component{
     render(){
         return (<div>
                     <Navigation />
-                    <h2>Products for Sale</h2>
+                    <h2>Holistic Products for Sale</h2>
+                    <h3>
+                        Shop for your favorite holistic products, services or recipes.  
+                    </h3>
+                    <div className="ProdPage-LinkCon">
+                    
+                        <Link 
+                            className="prodpg-links addProducts-link"
+                            to="addProduct">Add Products</Link>
+                    
+                    
+                        <Link 
+                             className=" prodpg-links myProducts-link"
+                            to="myProducts">My Products</Link>
+                    
+                    </div>
                     <section> 
                         {this.renderProductsList()}
                     </section>
