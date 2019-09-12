@@ -11,9 +11,9 @@ export default class Header extends React.Component{
             <div className='header_container'>
                 <header className="header">
                     <h1 className="title1">
-                        Holisitic Health
+                        Holistic Health
                     </h1>
-                    <h2 className="title2">Buy and sell goods that treat the entire body </h2>
+                    <h2 className="title2">Buy and sell products that treat the entire body </h2>
                 </header>
                 
             </div>
