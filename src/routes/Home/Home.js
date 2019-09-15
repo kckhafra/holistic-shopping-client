@@ -11,9 +11,9 @@ export default class App extends React.Component {
       <div className="Home">
           <Header/>
           <div className="img-container">
-          <img src={HomeImages.holisticLifeCream}/>
-          <img src={HomeImages.bottleAndSoap}/>
-          <img src={HomeImages.seaMoss}/>
+          <img className="home-img" src={HomeImages.holisticLifeCream}/>
+          <img className="home-img" src={HomeImages.bottleAndSoap}/>
+          <img className="home-img" src={HomeImages.seaMoss}/>
         </div>
         <div className="home_nav_container">
                 <Link

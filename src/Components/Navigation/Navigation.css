@@ -26,31 +26,25 @@ a.nav-links{
 
 @media (max-width: 800px){
     a.navlinks-dropdown{
-    margin-top: 50px;
+    
     display: block;
     text-decoration: none;
     color: black;
-    width: 100px;
-    
-    
-    padding: 10px;
+    padding: 20px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
+    color: white;
 }
 .dropdown-container{
+    margin-top: 50px;
+    position: absolute;
     background: black;
-    width: 150px;
+    width: 100%;
+    padding-bottom: 75px;
+}
 
-   
-}
-a.navlinks-dropdown{
-    color: white;
-    
-}
 .Nav{
     display: none;
-     
-    
 }
 .Nav-dropdown{
     border: black solid 1px;
@@ -62,14 +56,14 @@ a.navlinks-dropdown{
     
 }
 
-    
-    .nav-icon{
-        display: initial;
-        float: left;
-        margin-left: 5px;
+.nav-icon{
+    display: initial;
+    float: left;
+    margin-left: 5px;
         
     }
-    .bar1, .bar2, .bar3 {
+    
+.bar1, .bar2, .bar3 {
         width: 20px;
         height: 3px;
         background-color: black;
@@ -78,8 +72,5 @@ a.navlinks-dropdown{
       }
    
     
-    a.nav-links{
-        display: none;
-        
-    }
+    
 }

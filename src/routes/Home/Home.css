@@ -1,5 +1,5 @@
 .home_nav_container{
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center;
 }
 
@@ -16,5 +16,13 @@
 }
 
 .img-container{
+    flex-wrap: wrap;
     margin-top: 80px;
 }
+
+.home-img{
+    margin-bottom: 10px;
+    width: 290px;
+    
+}
+

@@ -1,0 +1,10 @@
+.myProd-pContainer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.myProd-p{
+    text-align: initial;
+    overflow-wrap: break-word;
+}
