@@ -7,6 +7,8 @@ const ProductContext = React.createContext({
     setMyProduct: ()=>{},
     deleteMyProduct: ()=>{},
     updateMyProduct: ()=>{},
+    clearError: () => {},
+    setError: () => {},
 })
 
 export default ProductContext;
@@ -14,7 +16,8 @@ export default ProductContext;
 export class ProductProvider extends React.Component{
     state = {
         product: [""],
-        myProduct: [""]
+        myProduct: [""],
+        error: null,
     };
 
     deleteMyProduct = (productId) => {
@@ -32,6 +35,15 @@ export class ProductProvider extends React.Component{
                 myProduct: newProduct
             })
     }
+
+    setError = error => {
+        console.error(error)
+        this.setState({ error })
+      }
+    
+      clearError = () => {
+        this.setState({ error: null })
+      }
 
     clearProduct = () => {
         this.setProduct([])
@@ -52,7 +64,10 @@ export class ProductProvider extends React.Component{
             myProduct: this.state.myProduct,
             setMyProduct: this.setMyProduct,
             deleteMyProduct: this.deleteMyProduct,
-            updateMyProduct: this.updateMyProduct
+            updateMyProduct: this.updateMyProduct,
+            error: this.state.error,
+            setError: this.setError,
+            clearError: this.clearError,
         }
         return(
             <ProductContext.Provider value={value}>

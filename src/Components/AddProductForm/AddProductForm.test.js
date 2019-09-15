@@ -1,15 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import AddProductForm from './AddProductForm';
-import BrowserRouter from 'react-router-dom'
+import {shallow, mount} from 'enzyme';
 
-
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(
-      <BrowserRouter>
-        <AddProductForm />
-        </BrowserRouter>, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('<AddProductForm />', function () {
+    it('Renders without crashing', () => {
+        shallow(<AddProductForm />);
+    });
+    
+    
 });
-      

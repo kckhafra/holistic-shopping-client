@@ -15,7 +15,7 @@ class AddProductPage extends React.Component{
 
     loginSuccess = (product)=>{
         
-        this.props.history.push('/productsListPage')
+        this.props.history.push('/myProducts')
     }
     
 

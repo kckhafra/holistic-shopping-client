@@ -19,6 +19,7 @@ export default class EditReact extends React.Component{
     
    
     componentDidMount(){
+        this.context.clearError()
         const {productId} = this.props.match.params
         ProductsService.getProductsById(productId)
         .then(product=>{
@@ -29,15 +30,14 @@ export default class EditReact extends React.Component{
                     price: prod.price,
                     remaining_inventory: prod.remaining_inventory,
                     description: prod.description,
-                    product_category: prod.product_product_category,
+                    product_category: prod.product_category,
                 })
             })
             
             })
-            .catch(error=>{
-                console.log({error})
-            })   
+            .catch(this.context.setError) 
     }
+   
 
     
     
