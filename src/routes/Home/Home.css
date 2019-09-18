@@ -7,8 +7,10 @@
   background-color: white;
   max-width: 60%;
   width: 100%;
-  padding: 80px;
+  padding-bottom: 80px;
+  padding-top: 80px;
   font-size: 16px;
+  
 }
 .home_nav_container{
     width: 100%;
@@ -77,15 +79,16 @@
 @media(max-width: 1550px){
     .Home{
       padding: 10px;
-      max-width: 70%;
+      max-width: 100%;
       
     }
 }
 
 @media(max-width: 2550px){
     .Home{
-      padding: 10px;  
-      max-width: 60%;
+      padding-bottom: 50px;  
+      padding-top: 50px;
+      max-width: 80%;
       
     }
 }
