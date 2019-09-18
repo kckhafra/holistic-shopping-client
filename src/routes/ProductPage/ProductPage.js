@@ -4,6 +4,8 @@ import ProductContext from '../../contexts/ProductContext'
 import Navigation from '../../Components/Navigation/Navigation'
 import './ProductPage.css'
 
+
+
 const uuid = require('uuid');
 
 
@@ -11,6 +13,10 @@ const uuid = require('uuid');
 export default class ProductPage extends React.Component{
     static defaultProps = {
         match: {params: {}}
+    }
+
+    handleBuy = ()=>{
+        this.props.history.push('/CheckoutPage')
     }
 
     handleCancelClick = ()=>{
@@ -44,7 +50,9 @@ export default class ProductPage extends React.Component{
                                 <h2>{product.service_name}</h2>
                                 <p>{product.description}</p>
                                 <p>Price: <span>{`$${product.price}`}</span></p>
-                                <button>Buy</button>
+                                <button
+                                onClick={this.handleBuy}
+                                >Buy</button>
                                 <button
                                 className="prod_button2" 
                                 onClick={this.handleCancelClick}

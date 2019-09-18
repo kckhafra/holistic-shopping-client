@@ -15,3 +15,10 @@
 .myProducts-link{
     margin-left: 15px;
 }
+
+.productListPage_itemContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    
+}

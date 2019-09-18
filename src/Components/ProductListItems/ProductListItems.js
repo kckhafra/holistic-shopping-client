@@ -6,7 +6,7 @@ import Config from '../../config'
 import TokenService from '../../services/token-service'
 
 export default class ProductListItems extends React.Component{
-
+    
     render(){
         const {product} = this.props
         
@@ -26,9 +26,15 @@ export default class ProductListItems extends React.Component{
                     <h4>Inventory: {" "}<span>{product.remaining_inventory}</span></h4>
                     <h4>Category: {" "}<span>{product.product_category}</span></h4>
                     
-                            
                 </div>
-            </main>
+                <div className="ProductBuy_container">
+                    <Link
+                        to="checkoutPage" 
+                        className="ProductItem_Buy">
+                            Buy
+                    </Link>   
+                </div>        
+                </main>
                     
                 </div>
             </div>

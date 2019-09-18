@@ -49,7 +49,7 @@ export default class MyProductListPage extends React.Component{
                     <div className="myProd-pContainer">
                         <p className="myProd-p">All of your products that you have for sell are displayed on this page. You can modify products by clicking the product you would like to modify. To post a new product for sell click <Link to="/addProduct">Add Product</Link></p>
                     </div>
-                    <section> 
+                    <section className="productListPage_itemContainer"> 
                     
                         {this.renderMyProductsList()}
                     </section>

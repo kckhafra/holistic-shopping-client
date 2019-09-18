@@ -52,7 +52,7 @@ export default class ProductsListPage extends React.Component{
                             to="myProducts">My Products</Link>
                     
                     </div>
-                    <section> 
+                    <section className="productListPage_itemContainer"> 
                         {this.renderProductsList()}
                     </section>
                 </div>

@@ -13,6 +13,9 @@ import MyProductsList from '../../routes/MyProductsList/MyProductsList'
 import MyProductPage from '../../routes/MyProductPage/MyProductPage'
 import EditProductForm from '../EditProductForm/EditProductForm'
 
+import CheckoutPage from '../../routes/CheckoutPage/CheckoutPage'
+
+
 class App extends React.Component {
   
 
@@ -53,6 +56,10 @@ class App extends React.Component {
         <Route 
           path={'/edit/:productId'}
           component={EditProductForm}
+        />
+       <Route
+        path={'/CheckoutPage'}
+        component={CheckoutPage}
         />
         
        
