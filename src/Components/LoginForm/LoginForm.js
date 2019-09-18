@@ -80,6 +80,7 @@ export default class LoginForm extends React.Component{
                         id='LoginForm__password'>
                     </input>
                     </div>
+                    <div logbutton_container>
                     <button 
                         className="log_button log_button1"
                         type='submit'>
@@ -92,6 +93,7 @@ export default class LoginForm extends React.Component{
                     >
                         cancel
                     </button>
+                    </div>
                    
             </form>
         )

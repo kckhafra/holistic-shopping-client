@@ -10,7 +10,7 @@ class CheckoutPage extends React.Component{
   render(){
     
     return(
-      <div>
+      <div className="prodList_container">
       <StripeProvider apiKey="pk_test_k4dh81vd6SLTJyFDdpLXODGs00rq7566vZ">
       <div className="example">
         <h1>Checkout</h1>

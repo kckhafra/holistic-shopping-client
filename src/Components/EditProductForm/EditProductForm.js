@@ -117,7 +117,7 @@ export default class EditReact extends React.Component{
         const options = this.gernerateOptionsHTML()
         const {service_name, price, remaining_inventory, description} = this.state
         return(
-            <div>
+            <div className="prodList_container">
                 <h2>Edit Product</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className="input_container">

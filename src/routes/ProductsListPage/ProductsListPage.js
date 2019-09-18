@@ -36,6 +36,7 @@ export default class ProductsListPage extends React.Component{
     render(){
         return (<div>
                     <Navigation />
+                    <div className="prodList_container">
                     <h2>Holistic Products for Sale</h2>
                     <h3>
                         Shop for your favorite holistic products, services or recipes.  
@@ -55,6 +56,7 @@ export default class ProductsListPage extends React.Component{
                     <section className="productListPage_itemContainer"> 
                         {this.renderProductsList()}
                     </section>
+                    </div>
                 </div>
             
         )

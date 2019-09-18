@@ -21,8 +21,10 @@ class AddProductPage extends React.Component{
 
     render(){
         return(
+            <section className="prodList_container">
             <AddProductForm
                 onLoginSuccess={this.loginSuccess}/>
+            </section>
 
         )
     }

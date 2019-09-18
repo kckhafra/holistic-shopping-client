@@ -2,9 +2,19 @@
     text-align: center;
 }
 .title1{
-    margin-top: 80px;
+    
     margin-bottom: 10px;
 }
 .title2{
     margin-top: 0px;
+}
+.header{
+    
+    overflow-wrap:break-word ;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    
+    
 }

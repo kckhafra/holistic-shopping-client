@@ -88,25 +88,27 @@ export default class Navigation extends React.Component{
             </div>
             <div className="Nav">
                 <Link 
-                    className="nav-links"
+                    className="nav-links log-link"
                     to='/'>
-                        Logout
-                </Link>
+                        Logout  
+                </Link> 
+                
                 <Link 
                     className="nav-links"
                     to='/addProduct'>
-                        Add Product
-                </Link>
+                        Add Product <span className="nav_span">||</span>
+                </Link> 
                 <Link 
                     className="nav-links"
                     to='/myProducts'>
-                        My Products
-                </Link>
+                        My Products <span className="nav_span">||</span>
+                </Link> 
+                
                 <Link
                     className="nav-links"
                     to='/productsListPage'
                 >
-                    Products for Sale
+                    Products for Sale <span className="nav_span">||</span>
                 </Link>
             </div>
             

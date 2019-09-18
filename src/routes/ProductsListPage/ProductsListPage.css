@@ -19,6 +19,21 @@
 .productListPage_itemContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     
 }
+
+.prodList_container{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+    max-width: 90%;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    padding-bottom: 50px;
+    margin-bottom: 550px;
+  }
+

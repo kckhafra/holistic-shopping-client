@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CardElement, injectStripe} from 'react-stripe-elements';
+import {CardNumberElement,CardExpiryElement,CardCvcElement,PaymentRequestButtonElement, injectStripe} from 'react-stripe-elements';
 import config from '../../config'
 import './CheckoutForm.css'
 
@@ -9,6 +9,8 @@ class CheckoutForm extends Component {
     this.state = {complete: false};
     this.submit = this.submit.bind(this);
   }
+  
+  
 
   async submit(ev) {
     ev.preventDefault()
@@ -16,6 +18,7 @@ class CheckoutForm extends Component {
     let response = await fetch(`${config.API_ENDPOINT}/charge`, {
       method: "POST",
       headers: {"Content-Type": "text/plain"},
+      body: token.id
       
     });
   
@@ -29,8 +32,11 @@ class CheckoutForm extends Component {
     return (
       <div className="checkout">
         <p className="p_checkout">Would you like to complete the purchase?</p>
-        <CardElement />
-        <button onClick={this.submit}>Send</button>
+        <CardNumberElement />
+        <CardExpiryElement />
+        <CardCvcElement />
+         
+        <button onClick={this.submit}>Send</button> 
       </div>
     );
   }

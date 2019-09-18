@@ -7,14 +7,24 @@
     
     
 }
+a.log-link{
+    margin-right: 20px;;
+}
 
 a.nav-links{
     
     text-decoration: none;
     color: black;
     float: right;
-    padding: 10px;
+    padding-top: 10px;
     font-weight: bold;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 14px
+}
+.nav_span{
+    padding-left: 5px;
+    color: rgb(114, 111, 111);
 }
 
 

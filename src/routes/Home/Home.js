@@ -16,18 +16,19 @@ export default class App extends React.Component {
           <img className="home-img" src={HomeImages.seaMoss}/>
         </div>
         <div className="home_nav_container">
-                <Link
+                
+                  <Link
                     className="home_nav"
                     to='/register'>
                     Register {" "}
                 </Link>
-                
                 <Link 
                     className="home_nav"
                     to='/login'>
                         Log in
                 </Link>
-            </div>
+            
+      </div>
       </div>
     );
   }

@@ -8,7 +8,7 @@ export default class Header extends React.Component{
    
     render(){
         return(
-            <div className='header_container'>
+            
                 <header className="header">
                     <h1 className="title1">
                         Holistic Health
@@ -16,7 +16,7 @@ export default class Header extends React.Component{
                     <h2 className="title2">Buy and sell products that treat the entire body </h2>
                 </header>
                 
-            </div>
+           
 
            
         )

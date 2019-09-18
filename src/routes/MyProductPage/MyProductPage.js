@@ -74,6 +74,7 @@ export default class MyProductPage extends React.Component{
         return(
             <div>
                 <Navigation />
+                <div className = "prodList_container">
                 <h2>Manage Your Products</h2>
                 <div >
                     {product.map((product, index)=>{
@@ -108,6 +109,7 @@ export default class MyProductPage extends React.Component{
                         
                             )
                     })}
+                </div>
                 </div>
             </div>
         )
