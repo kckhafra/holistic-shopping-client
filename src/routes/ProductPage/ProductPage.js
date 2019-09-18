@@ -41,7 +41,7 @@ export default class ProductPage extends React.Component{
             <div>
                 <Navigation />
                 <h2>Buy Product or Service</h2>
-                <div >
+                <div className="prodList_container">
                     {product.map((product, index)=>{
                     
                         return(

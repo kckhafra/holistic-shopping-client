@@ -181,7 +181,7 @@ export default class EditReact extends React.Component{
                         <label 
                             className="label_addprod label_product_category"
                             htmlFor='add_product_category'>
-                            product_category
+                            Product Category
                         </label>
                         
                         <select 
