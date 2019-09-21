@@ -29,11 +29,13 @@ export default class Home extends React.Component {
         
       return <div>
       <div><h1>Products For Sale</h1></div>
+      <div className="homeItem_container">
       {this.context.guestProducts.map(product=>
           <ProductListItem
               key={uuid}
               product={product}/>
       ) }
+      </div>
       </div>  
   }
 
@@ -55,21 +57,13 @@ export default class Home extends React.Component {
       <div>
         <p className="home_p">Buy And Sell Products That Nourish The Whole Body. </p>
         <div className="logo_container">
-          
-        
-                    
-                    <div className="homeProd_container">
-                    
                     <section className="prodSale_container"> 
-                    
-                    <div className="homeItem_container">
                         {this.context.guestProducts.length>0
                           ? this.renderProductsList()
                           :this.renderNoProducts()}
-                    </div>
+                   
                     </section>
                     </div>
-                </div>
                 </div>
       </div>
     );
