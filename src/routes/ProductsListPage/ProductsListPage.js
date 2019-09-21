@@ -5,6 +5,7 @@ import ProductListItem from '../../Components/ProductListItems/ProductListItems'
 import Navigation from '../../Components/Navigation/Navigation'
 import {Link} from 'react-router-dom'
 import "./ProductsListPage.css"
+import Header from '../../Components/Header/Header'
 const uuid = require('uuid')
 
 export default class ProductsListPage extends React.Component{
@@ -35,7 +36,7 @@ export default class ProductsListPage extends React.Component{
 
     render(){
         return (<div>
-                    <Navigation />
+                    <Header />
                     <div className="prodList_container">
                     <h2>Holistic Products for Sale</h2>
                     <h3>

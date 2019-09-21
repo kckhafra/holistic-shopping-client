@@ -34,9 +34,7 @@ class App extends React.Component {
         <Route
           path={'/register'}
           component={RegistrationPage}/>
-        <Route
-          path={'/productsListPage'}
-          component={ProductsListPage}/>
+        
         <Route 
           exact path={'/product/:productId'}
           component={ProductPage}/>

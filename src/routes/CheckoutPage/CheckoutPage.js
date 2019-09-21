@@ -5,7 +5,7 @@ import './CheckoutPage.css'
 
 class CheckoutPage extends React.Component{
   handleCancelClick = ()=>{
-    this.props.history.push('/productsListPage')
+    this.props.history.goBack()
 }
   render(){
     

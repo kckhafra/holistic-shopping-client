@@ -14,8 +14,34 @@ const ProductApiService = {
                 : res.json()
             )
     },
+    getGuestProducts(){
+        return fetch(`${config.API_ENDPOINT}/guest-products`,{
+        })
+        .then((res)=>
+            (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
+            )
+    },
+    getGuestProductsById(productId){
+        return fetch(`${config.API_ENDPOINT}/guest-products/${productId}`,{
+        })
+        .then((res)=>
+            (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
+            )
+    },
+    getGuestProductsSearch(searchTerm){
+        return fetch(`${config.API_ENDPOINT}/guest-products?search_term=${searchTerm}`,{
+        })
+        .then((res)=>
+            (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
+            )
+    },
     getMyProducts(){
-        
         return fetch(`${config.API_ENDPOINT}/products/my`,{
             
             headers: {

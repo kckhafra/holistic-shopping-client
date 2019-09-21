@@ -1,9 +1,10 @@
 import React from 'react';
 import productsApiServices from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
-import Navigation from '../../Components/Navigation/Navigation'
+import Header from '../../Components/Header/Header'
 import config from '../../config'
 import TokenService from '../../services/token-service'
+import './MyProductPage.css'
 
 const uuid = require('uuid');
 
@@ -73,7 +74,7 @@ export default class MyProductPage extends React.Component{
         
         return(
             <div>
-                <Navigation />
+                <Header />
                 <div className = "prodList_container">
                 <h2>Manage Your Products</h2>
                 <div >
@@ -81,10 +82,20 @@ export default class MyProductPage extends React.Component{
                     
                         return(
                         <div key={uuid}>
-                            <div className="prodpage_container">
-                                <h2>{product.service_name}</h2>
-                                <p>{product.description}</p>
-                                <p>Price: <span>{`$${product.price}`}</span></p>
+                            <div className="myProduct_item_container">
+                               
+                        <img className="prod_img" src={`${product.images}`}/>
+
+                       <div className="myProd_info"> 
+                            <header className='ProductItem_header'>
+                                <h2 className='productItem_h2'>
+                                {product.service_name}
+                                </h2>
+                            </header>
+                            <h4 className="price">{`$${product.price}`}</h4> 
+                            <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
+                            <h4> {" "}<span>{product.product_category}</span></h4>
+                        
                                 <button
                                     onClick={this.handleClickDelete}
                                     className="item_button item_button1">
@@ -95,6 +106,8 @@ export default class MyProductPage extends React.Component{
                                     className="item_button item_button2">
                                         Edit
                                 </button> 
+                                </div>
+                                
                                        
                             </div>
                             <div>

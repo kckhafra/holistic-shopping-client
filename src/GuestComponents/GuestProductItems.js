@@ -5,7 +5,7 @@ import './ProductListItems.css';
 import Config from '../../config'
 import TokenService from '../../services/token-service'
 
-export default class ProductListItems extends React.Component{
+export default class GuestProductItems extends React.Component{
     
     render(){
         const {product} = this.props

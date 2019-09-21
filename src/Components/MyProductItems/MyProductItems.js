@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './MyProductItems.css'
 
 
 
@@ -12,26 +13,59 @@ export default class MyProductItems extends React.Component{
         
         return(
             <div className="product_item_container">
+                <div className="border">
+                <Link 
+                    className="prod_links"
+                    to={`/product/my/${product.id}`}>
+                    
+                
+                <main>
                 <div>
-                <Link to={`/product/my/${product.id}`}>
+                    <img className="prod_img" src={`${product.images}`}/>
                     <header className='ProductItem_header'>
                         <h2 className='productItem_h2'>
                             {product.service_name}
                         </h2>
                     </header>
-                </Link>
-                <main>
-                    <div>
-                        <h4>Price: {" "}<span>{`$${product.price}`}</span></h4> 
-                        <h4>Inventory: {" "}<span>{product.remaining_inventory}</span></h4>
-                        <h4>Category: {" "}<span>{product.product_category}</span></h4>
-                        
-                                
-                    </div>
-                </main>
+                    <h4 className="price">{`$${product.price}`}</h4> 
+                    <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
+                    <h4> {" "}<span>{product.product_category}</span></h4>
+                    
                     
                 </div>
-            </div>
+                
+                      
+                </main>
+                </Link>    
+                </div>
+                </div>
+            // <div className="product_item_container">
+            //     <div>
+            //     <Link to={`/product/my/${product.id}`}>
+            //         <header className='ProductItem_header'>
+            //             <h2 className='productItem_h2'>
+            //                 {product.service_name}
+            //             </h2>
+            //         </header>
+            //     </Link>
+            //     <main>
+            //         <div>
+            //         <img className="prod_img" src={`${product.images}`}/>
+            //         <header className='ProductItem_header'>
+            //             <h2 className='productItem_h2'>
+            //                 {product.service_name}
+            //             </h2>
+            //         </header>
+            //         <h4 className="price">{`$${product.price}`}</h4> 
+            //         <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
+            //         <h4> {" "}<span>{product.product_category}</span></h4>
+                        
+                                
+            //         </div>
+            //     </main>
+                    
+            //     </div>
+            // </div>
             
         )
     }

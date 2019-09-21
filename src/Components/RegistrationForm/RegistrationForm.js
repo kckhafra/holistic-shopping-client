@@ -40,7 +40,8 @@ export default class RegistrationForm extends React.Component{
     render(){
         const {error} = this.state
         return(
-            <div>
+            <div className="registration_container">
+                <h2>Register</h2>
                 <div role="alert">
                     {error && <p className='error'>{error}</p>}
                 </div>

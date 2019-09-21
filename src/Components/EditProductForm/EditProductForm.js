@@ -1,6 +1,8 @@
 import React from 'react';
 import ProductsService from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
+import Header from '../../Components/Header/Header'
+import './EditProductForm.css'
 const uuid = require ('uuid')
 
  
@@ -12,6 +14,7 @@ export default class EditReact extends React.Component{
         remaining_inventory: 1,
         description: "",
         product_category: "",
+        images: "",
 
     }
     static contextType = ProductContext
@@ -30,6 +33,7 @@ export default class EditReact extends React.Component{
                     price: prod.price,
                     remaining_inventory: prod.remaining_inventory,
                     description: prod.description,
+                    images: prod.images,
                     product_category: prod.product_category,
                 })
             })
@@ -59,12 +63,15 @@ export default class EditReact extends React.Component{
         this.setState({product_category: e.target.value})
         
     }
+    handleChangeimages = e =>{
+        this.setState({images: e.target.value})
+    }
 
     handleSubmit = (e)=>{
         e.preventDefault()
         const {productId} = this.props.match.params
-        const {service_name, price, remaining_inventory, description, product_category} = this.state
-        const editedProducts = {service_name, price, remaining_inventory, description, product_category}
+        const {service_name, price, remaining_inventory, description, product_category, images} = this.state
+        const editedProducts = {service_name, price, remaining_inventory, description, product_category, images}
         ProductsService.patchProduct(
             productId,
             editedProducts
@@ -115,9 +122,11 @@ export default class EditReact extends React.Component{
 
     render(){
         const options = this.gernerateOptionsHTML()
-        const {service_name, price, remaining_inventory, description} = this.state
+        const {service_name, price, remaining_inventory, description, images} = this.state
         return(
-            <div className="prodList_container">
+            <div >
+                <Header/>
+                <div className="editprod_container">
                 <h2>Edit Product</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className="input_container">
@@ -179,6 +188,20 @@ export default class EditReact extends React.Component{
                     </div>
                     <div className="input_container">
                         <label 
+                            className="label_addprod label_image"
+                            htmlFor='add_image'>
+                            Product Image URL
+                        </label>
+                        <input
+                            onChange={this.handleChangeimages}
+                            required
+                            value={images}
+                            name='images'
+                            id='add_image'>
+                        </input>
+                    </div>
+                    <div className="input_container">
+                        <label 
                             className="label_addprod label_product_category"
                             htmlFor='add_product_category'>
                             Product Category
@@ -206,6 +229,7 @@ export default class EditReact extends React.Component{
                     </button>
                     </div>
                 </form>
+                </div>
             </div>
         )
     }

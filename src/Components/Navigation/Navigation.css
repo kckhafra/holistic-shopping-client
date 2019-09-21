@@ -1,10 +1,18 @@
+/* 
 
 .Nav{
     border: black solid 1px;
     background-color: rgb(43, 192, 100);
     background-size: cover;
-    height: 50px;
-    
+    min-width: 1000px;
+    height: 99px;
+    line-height: 1em;
+    top: 0;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+    zoom: 1;
+    z-index: 198;
     
 }
 a.log-link{
@@ -83,4 +91,4 @@ a.nav-links{
    
     
     
-}
+} */

@@ -10,30 +10,27 @@ export default class LoginForm extends React.Component{
 
    state = {error: null}
     
-    handleSubmitJwtAuth = (ev) => {
-        ev.preventDefault()
-        const {user_name, password} = ev.target
-        this.setState({error:null})
-        
+   handleSubmitJwtAuth = (ev) => {
+    ev.preventDefault()
+    const {user_name, password} = ev.target
+    this.setState({error:null})
+    
 
-        AuthApiService.postLogin({
-            user_name: user_name.value,
-            password: password.value,
+    AuthApiService.postLogin({
+        user_name: user_name.value,
+        password: password.value,
+    })
+    
+        .then(res => {
+            user_name.value = ''
+            password.value = ''
+            TokenService.saveAuthToken(res.authToken)
+
+            this.props.onLoginSuccess()
         })
-        
-            .then(res => {
-                user_name.value = ''
-                password.value = ''
-                TokenService.saveAuthToken(res.authToken)
-
-                this.props.onLoginSuccess()
-            })
-            .catch(res=>{
-                this.setState({error: res.error})
-            })
-
-            
-            
+        .catch(res=>{
+            this.setState({error: res.error})
+        })
 
 
         user_name.value = ''
@@ -61,6 +58,7 @@ export default class LoginForm extends React.Component{
                         User name
                     </label>
                     <input
+                    type="text"
                         required
                         name='user_name'
                         id='LoginForm__user_name'
@@ -80,8 +78,9 @@ export default class LoginForm extends React.Component{
                         id='LoginForm__password'>
                     </input>
                     </div>
-                    <div logbutton_container>
+                    <div >
                     <button 
+                        
                         className="log_button log_button1"
                         type='submit'>
                     Login
@@ -91,7 +90,7 @@ export default class LoginForm extends React.Component{
                         type='button'
                         onClick={this.handleCancel}
                     >
-                        cancel
+                        Cancel
                     </button>
                     </div>
                    

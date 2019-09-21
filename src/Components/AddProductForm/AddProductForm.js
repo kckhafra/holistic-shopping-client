@@ -14,12 +14,14 @@ class AddProductPage extends React.Component{
     
     handleSubmit = (ev)=>{
         ev.preventDefault()
-        const {service_name, price, inventory_amount, description, category} = ev.target
+        
+        const {service_name, price, inventory_amount, description, images,category} = ev.target
         ProductService.postProduct({
             service_name: service_name.value,
             price: price.value,
             remaining_inventory: inventory_amount.value,
             description: description.value,
+            images: images.value,
             product_category: category.value
         })
             .then((product)=>{
@@ -35,7 +37,7 @@ class AddProductPage extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="addProd_container">
                 <h2>Sale Product/Service</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className="input_container">
@@ -84,6 +86,18 @@ class AddProductPage extends React.Component{
                             required
                             name='description'
                             id='add_description'>
+                        </input>
+                    </div>
+                    <div className="input_container">
+                        <label 
+                            className="label_addprod label_image"
+                            htmlFor='add_image'>
+                            Product Image URL
+                        </label>
+                        <input
+                            required
+                            name='images'
+                            id='add_image'>
                         </input>
                     </div>
                     <div className="input_container">

@@ -1,14 +1,14 @@
-.title_prod{
-    text-align: center;
+.myProd_info{
+    display: inline-block;
+    margin-left: 10px;
+    margin-left: 50px;
+    width: 400px;
 }
-.prod_button2{
-    margin-left: 15px;
-}
-.prodpage_container{
+.myProduct_item_container{
     background-repeat: no-repeat;
     background-color: white;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 0;
     margin-top: 0;
     overflow: hidden;
     padding-top: 20px;
@@ -18,11 +18,4 @@
     display: block;
     width: 100%;
     text-align: center;
-    
-}
-.Prod_info{
-    display: inline-block;
-    margin-left: 10px;
-    margin-left: 50px;
-    width: 400px;
 }

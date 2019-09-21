@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import TokenService from '../../services/token-service';
 import './Navigation.css'
+import Header from '../Header/Header'
 
 
 export default class Navigation extends React.Component{
@@ -56,11 +57,11 @@ export default class Navigation extends React.Component{
                             
                         </div>
                         <section className="dropdown-container">
-                        <Link className="navlinks-dropdown"
+                        <button className="navlinks-dropdown"
                             onClick={this.handleLogoutButton}
-                            to='/'>
+                            >
                             Logout
-                        </Link>
+                        </button>
                         
                         <Link 
                             className="navlinks-dropdown"
@@ -88,6 +89,7 @@ export default class Navigation extends React.Component{
             </div>
             <div className="Nav">
                 <Link 
+                    onClick={this.handleLogoutButton}
                     className="nav-links log-link"
                     to='/'>
                         Logout  
@@ -118,19 +120,31 @@ export default class Navigation extends React.Component{
 
     renderLoginLink(){
         return (
-            <div className="Nav">
-                <Link
-                    className="nav-links"
+            <div >
+                <Header/>
+        <div className="homenav_container">
+          <div className="header_container">
+            
+          </div >
+                <div className="homelink_container">
+                  <div>
+                  <Link
+                    className="home_nav"
                     to='/register'>
                     Register {" "}
                 </Link>
-                
+                </div>
+                <div>
                 <Link 
-                    className="nav-links"
+                    className="home_nav"
                     to='/login'>
                         Log in
                 </Link>
-            </div>
+                </div>
+                </div>
+                </div>
+            
+      </div>
             
         )
     }
@@ -138,9 +152,11 @@ export default class Navigation extends React.Component{
     render(){
         return(
             <nav className='navigation'>
+                
                 {TokenService.hasAuthToken()
                     ? this.renderLogoutLink()
                     : this.renderLoginLink()}
+                
             </nav>
         )
     }

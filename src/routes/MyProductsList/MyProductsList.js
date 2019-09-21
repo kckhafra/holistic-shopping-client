@@ -3,7 +3,7 @@ import React from 'react'
 import ProductsApiService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 import ProductListItem from '../../Components/ProductListItems/ProductListItems'
-import Navigation from '../../Components/Navigation/Navigation'
+import Header from '../../Components/Header/Header'
 import TokenService from '../../services/token-service'
 import MyProductItems from '../../Components/MyProductItems/MyProductItems'
 import {Link} from "react-router-dom"
@@ -44,7 +44,7 @@ export default class MyProductListPage extends React.Component{
 
     render(){
         return (<div>
-                    <Navigation />
+                    <Header />
                     <div className="prodList_container">
                     <h2>My Products</h2>
                     <div className="myProd-pContainer">

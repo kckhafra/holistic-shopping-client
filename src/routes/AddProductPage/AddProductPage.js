@@ -3,7 +3,7 @@ import ProductService from '../../services/products-api-services'
 import {withRouter} from 'react-router-dom';
 import TokenService from '../../services/token-service'
 import AddProductForm from '../../Components/AddProductForm/AddProductForm'
-
+import Header from '../../Components/Header/Header'
 
 
 class AddProductPage extends React.Component{
@@ -21,7 +21,8 @@ class AddProductPage extends React.Component{
 
     render(){
         return(
-            <section className="prodList_container">
+            <section className="">
+            <Header />
             <AddProductForm
                 onLoginSuccess={this.loginSuccess}/>
             </section>

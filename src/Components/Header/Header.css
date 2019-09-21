@@ -1,20 +1,136 @@
-.title1, .title2{
-    text-align: center;
+.link_title1{
+    text-decoration: initial;
+    color: white;
 }
 .title1{
-    
-    margin-bottom: 10px;
+   color: White;
+   font-size: 25px;
+   margin: 0px;
 }
 .title2{
-    margin-top: 0px;
+    color: white;
+    font-size: 20px;
+    margin:0px;
 }
-.header{
+
+
+.header{ 
+    padding: 10px;
+    color: white;
+    overflow-wrap:break-word ; 
+    display: flex;
+    justify-content: space-around;
     
-    overflow-wrap:break-word ;
+}
+
+#header_input{
+    width: 492px;
+    height: 21px;
+    padding: 6px;
+    line-height: 15px;
+    font-size: 15px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    vertical-align: middle;
+    margin-right: 0px;
+    
+}
+
+.submit-input{
+   all: initial;
+   cursor: pointer;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+   color: white;
+   background-color: orange;
+   padding: 6px;
+   padding-bottom: 8px;
+   height: 21px;
+   
+  
+}
+
+.Nav-dropdown{
+    display: none;
+}
+
+
+@media (max-width: 950px){
+    .Nav-dropdown{
+        display: initial;
+    }
+    .title1{
+        color: White;
+        font-size: 20px;
+        margin: 0px;
+     }
+    #header_input{
+        width: 292px;
+        height: 11px;
+        padding: 6px;
+        line-height: 15px;
+        font-size: 15px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        vertical-align: middle;
+        margin-right: 0px;
+        
+    }
+    
+    .submit-input{
+       all: initial;
+       cursor: pointer;
+       border-top-right-radius: 3px;
+       border-bottom-right-radius: 3px;
+       color: white;
+       background-color: orange;
+       padding: 3px;
+       padding-bottom: 11px;
+       height: 11px;
+       
+      
+    }
+.nav_container{
+    display: none;
+}
+  a.navlinks-dropdown{
+  
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.dropdown-container{
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    
-    
+    display: block;
+    margin-top: 0;
+    position: absolute;
+    background: black;
+    width: 100%;
+    padding-bottom: 75px;
+}
+
+
+
+
+.nav-icon{
+  display: initial;
+  float: left;
+  margin-left: 5px;
+      
+  }
+  
+.bar1, .bar2, .bar3 {
+      width: 20px;
+      height: 3px;
+      background-color: black;
+      margin: 3px 0;
+      transition: 0.4s;
+    }
+ 
+  
+  
 }
