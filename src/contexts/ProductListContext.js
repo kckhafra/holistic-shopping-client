@@ -7,7 +7,8 @@ import React from 'react';
     myProducts: [],
     setMyProducts: ()=>{},
     guestProducts: [],
-    setGuestProductList: ()=>{}
+    setGuestProductList: ()=>{},
+    
     
 })
 export default ProductListContext
@@ -29,6 +30,9 @@ export class ProductListProvider extends React.Component{
     setProductList = productList=>{
         this.setState({productList})
     }
+    clearGuestProduct = () => {
+        this.setGuestProductList([])
+    }
 
     render(){
         
@@ -39,7 +43,8 @@ export class ProductListProvider extends React.Component{
             myProducts: this.state.myProducts,
             setMyProducts:this.setMyProducts,
             guestProducts: this.state.guestProducts,
-            setGuestProductList: this.setGuestProductList
+            setGuestProductList: this.setGuestProductList,
+            clearGuestProduct: this.clearGuestProduct,
         }
         return (
             <ProductListContext.Provider value={value}>

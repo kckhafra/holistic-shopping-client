@@ -10,12 +10,13 @@ export default class LoginForm extends React.Component{
 
    state = {error: null}
     
+   
    handleSubmitJwtAuth = (ev) => {
     ev.preventDefault()
     const {user_name, password} = ev.target
     this.setState({error:null})
     
-
+    
     AuthApiService.postLogin({
         user_name: user_name.value,
         password: password.value,

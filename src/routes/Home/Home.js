@@ -27,14 +27,22 @@ export default class Home extends React.Component {
 
     renderProductsList(){
         
-      return this.context.guestProducts.map(product=>
+      return <div>
+      <div><h1>Products For Sale</h1></div>
+      {this.context.guestProducts.map(product=>
           <ProductListItem
               key={uuid}
               product={product}/>
-      )   
+      ) }
+      </div>  
+  }
+
+  renderNoProducts(){
+    return <div className="no_products">Currently all sellers have run out of products to sell. That just means we are popular. Make sure to come back soon to get your holsitic products</div>
   }
 
     render(){
+      console.log(this.context)
     return (
       <div className="Home">
         <div className="homenav_container">
@@ -53,9 +61,11 @@ export default class Home extends React.Component {
                     <div className="homeProd_container">
                     
                     <section className="prodSale_container"> 
-                    <div><h1>Products For Sale</h1></div>
+                    
                     <div className="homeItem_container">
-                        {this.renderProductsList()}
+                        {this.context.guestProducts.length>0
+                          ? this.renderProductsList()
+                          :this.renderNoProducts()}
                     </div>
                     </section>
                     </div>

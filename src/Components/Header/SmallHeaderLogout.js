@@ -9,10 +9,7 @@ export default class SmallHeaderLogOut extends React.Component{
         showMenu: false,
     };
     
-    handleLogoutButton = ()=>{
-        TokenService.clearAuthToken()
-        
-    }
+   
 
     showMenu = (event)=>{
         event.preventDefault();
@@ -70,12 +67,12 @@ export default class SmallHeaderLogOut extends React.Component{
                     <section className="dropdown-container">
                     
                     <section className="dropdown-container">
-                         <Link className="navlinks-dropdown"
-                            onClick={this.handleLogoutButton}
-                            to="/"
+                         <button className="navlinks-dropdown"
+                            onClick={this.props.onLogout}
+                            
                             >
                             Logout
-                        </Link>
+                        </button>
                         
                         <Link 
                             className="navlinks-dropdown"

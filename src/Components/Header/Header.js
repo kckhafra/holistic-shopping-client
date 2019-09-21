@@ -25,6 +25,7 @@ export default class Header extends React.Component{
         .then(this.context.setGuestProductList)
     }
     
+    
 
 
     handleLogoutButton = ()=>{
@@ -32,14 +33,16 @@ export default class Header extends React.Component{
         
     }
 
+    componentWillUnmount(){
+        this.context.clearGuestProduct()
+    }
+
     renderLogoutLink(){
         
         return(
             
             <div className="homenav_container">
-                <SmallHeaderLogout
-                onSubmit={this.handleSubmit}
-                />
+                
                 
                 <div className="nav_container">
                     <header className="header">
@@ -96,9 +99,9 @@ export default class Header extends React.Component{
         return (
             
                 <div className="homenav_container">
-                    <SmallHeaderLogin
+                    {/* <SmallHeaderLogin
                         onSubmit={this.handleSubmit}
-                        onLogout={this.handleLogoutButton}/>
+                        onLogout={this.handleLogoutButton}/> */}
                         
           
             <div className="nav_container">
