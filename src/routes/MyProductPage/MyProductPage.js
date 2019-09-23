@@ -75,7 +75,7 @@ export default class MyProductPage extends React.Component{
         return(
             <div>
                 <Header />
-                <div className = "prodList_container">
+                <div className = "myProdList_container">
                 <h2>Manage Your Products</h2>
                 <div >
                     {product.map((product, index)=>{
@@ -84,7 +84,7 @@ export default class MyProductPage extends React.Component{
                         <div key={uuid}>
                             <div className="myProduct_item_container">
                                
-                        <img className="prod_img" src={`${product.images}`}/>
+                        <img className="myProd_img" src={`${product.images}`} alt="seller images"/>
 
                        <div className="myProd_info"> 
                             <header className='ProductItem_header'>

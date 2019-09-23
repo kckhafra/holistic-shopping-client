@@ -1,11 +1,9 @@
 import React from 'react';
-
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import './App.css';
 import {Route} from 'react-router-dom';
 import Home from '../../routes/Home/Home'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
-import ProductsListPage from '../../routes/ProductsListPage/ProductsListPage'
 import ProductPage from '../../routes/ProductPage/ProductPage';
 import AddProductPage from '../../routes/AddProductPage/AddProductPage'
 import MyProductsList from '../../routes/MyProductsList/MyProductsList'

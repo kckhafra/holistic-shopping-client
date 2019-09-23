@@ -1,7 +1,6 @@
 import React from 'react';
 import productsApiServices from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
-import Navigation from '../../Components/Navigation/Navigation'
 import './ProductPage.css'
 import Header from '../../Components/Header/Header'
 
@@ -50,7 +49,7 @@ export default class ProductPage extends React.Component{
                         return(
                         <div key={uuid}>
                             <div className="prodpage_container">
-                            <img className="prod_img" src={`${product.images}`}/>
+                            <img className="prod_img" src={`${product.images}`} alt="seller images"/>
                             <div className="Prod_info"> 
                             <header className='ProductItem_header'>
                                 <h2 className='productItem_h2'>

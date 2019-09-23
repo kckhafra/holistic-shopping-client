@@ -1,14 +1,10 @@
 import React from 'react';
 import './Home.css'
-import {Link} from 'react-router-dom'
-import Navigation from '../../Components/Navigation/Navigation'
 import ProductListContext from '../../contexts/ProductListContext'
 import ProductsApiService from '../../services/products-api-services'
 import ProductListItem from '../../Components/ProductListItems/ProductListItems'
 import Header from '../../Components/Header/Header'
-import HomeImages from './Home-images'
-
-const uuid = require("uuid")
+const uuid = require('uuid')
 
 
 export default class Home extends React.Component {
@@ -44,7 +40,6 @@ export default class Home extends React.Component {
   }
 
     render(){
-      console.log(this.context)
     return (
       <div className="Home">
             <Header

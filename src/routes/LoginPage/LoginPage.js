@@ -1,13 +1,12 @@
 import React from 'react';
 import LoginForm from '../../Components/LoginForm/LoginForm'
-import {Link} from 'react-router-dom'
 import './LoginPage.css'
-import Header from '../../Components/Header/Header'
+
 
 export default class LoginPage extends React.Component{
 
     handleLoginSuccess = () => {
-        const { location, history } = this.props
+        const { history } = this.props
         const destination = '/'
         history.push(destination)
       }

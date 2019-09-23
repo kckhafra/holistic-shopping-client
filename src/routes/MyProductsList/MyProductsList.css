@@ -8,3 +8,20 @@
     text-align: initial;
     overflow-wrap: break-word;
 }
+
+.myProdList_container{
+    text-align: center;
+}
+.productListPage_itemContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 859px){
+    .productListPage_itemContainer{
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

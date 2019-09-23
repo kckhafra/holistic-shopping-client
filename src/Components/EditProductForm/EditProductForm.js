@@ -3,7 +3,7 @@ import ProductsService from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
 import Header from '../../Components/Header/Header'
 import './EditProductForm.css'
-const uuid = require ('uuid')
+
 
  
 
@@ -27,7 +27,6 @@ export default class EditReact extends React.Component{
         ProductsService.getProductsById(productId)
         .then(product=>{
             return product.map((prod)=>{
-                
                 this.setState({ 
                     service_name: prod.service_name,
                     price: prod.price,

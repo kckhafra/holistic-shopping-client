@@ -1,5 +1,5 @@
 import config from '../config'
-const jwt = require('jsonwebtoken')
+
 
 const TokenService = {
     makeAuthToken(userName, password){

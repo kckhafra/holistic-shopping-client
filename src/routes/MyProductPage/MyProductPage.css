@@ -7,15 +7,30 @@
 .myProduct_item_container{
     background-repeat: no-repeat;
     background-color: white;
-    position: relative;
-    margin-bottom: 0;
+    margin-bottom: 100px;
     margin-top: 0;
-    overflow: hidden;
     padding-top: 20px;
     margin: 5px;
     padding: 20px 0 15px 0;
     box-sizing: border-box;
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
+}
+
+@media(max-width:725px){
+    .myProd_img{
+        width: 150px;
+    }
+    .myProd_info{
+        font-size: 14px;
+    }
+    .myProduct_item_container{
+        justify-content: center;
+    }
+}
+@media(max-width: 506px){
+    .myProduct_item_container{
+        justify-content: center;
+    }
 }

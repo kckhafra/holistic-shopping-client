@@ -2,7 +2,6 @@ import React from 'react';
 import ProductsApiService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 import ProductListItem from '../../Components/ProductListItems/ProductListItems'
-import Navigation from '../../Components/Navigation/Navigation'
 import {Link} from 'react-router-dom'
 import "./ProductsListPage.css"
 import Header from '../../Components/Header/Header'

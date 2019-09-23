@@ -1,7 +1,4 @@
 import React from 'react'
-import ProductService from '../../services/products-api-services'
-import {withRouter} from 'react-router-dom';
-import TokenService from '../../services/token-service'
 import AddProductForm from '../../Components/AddProductForm/AddProductForm'
 import Header from '../../Components/Header/Header'
 

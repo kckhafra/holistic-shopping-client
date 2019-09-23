@@ -1,10 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import Navigation from '../Navigation/Navigation';
 import './Header.css'
 import TokenService from '../../services/token-service'
-import SmallHeaderLogout from './SmallHeaderLogout'
-import SmallHeaderLogin from './SmallHeaderLogin'
 import ProductsService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CardNumberElement,CardExpiryElement,CardCvcElement,PaymentRequestButtonElement, injectStripe} from 'react-stripe-elements';
+import {CardNumberElement,CardExpiryElement,CardCvcElement, injectStripe} from 'react-stripe-elements';
 import config from '../../config'
 import './CheckoutForm.css'
 

@@ -1,9 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { privateEncrypt } from 'crypto';
 import './ProductListItems.css';
-import Config from '../../config'
-import TokenService from '../../services/token-service'
+
 
 export default class ProductListItems extends React.Component{
     
@@ -20,7 +18,7 @@ export default class ProductListItems extends React.Component{
                 
                 <main>
                 <div>
-                    <img className="prod_img" src={`${product.images}`}/>
+                    <img className="prod_img" src={`${product.images}`} alt="seller images"/>
                     <header className='ProductItem_header'>
                         <h2 className='productItem_h2'>
                             {product.service_name}
