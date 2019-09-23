@@ -1,3 +1,18 @@
+
+.homenav_container{
+    background: rgb(33, 33, 59);
+   
+}
+.home_nav{
+    width: 100%;
+    margin: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: White;
+    font-weight: bolder;
+   
+}
+
 .link_title1{
     text-decoration: initial;
     color: white;
@@ -13,6 +28,16 @@
     margin:0px;
 }
 
+.header_container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.homelink_container{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
 
 .header{ 
     padding: 10px;
@@ -26,7 +51,8 @@
 #header_input{
     width: 492px;
     height: 21px;
-    padding: 6px;
+    padding: 14px;
+    padding-top: 15px;
     line-height: 15px;
     font-size: 15px;
     border-top-left-radius: 3px;
@@ -43,58 +69,31 @@
    border-bottom-right-radius: 3px;
    color: white;
    background-color: orange;
-   padding: 6px;
-   padding-bottom: 8px;
+   padding: 5px;
+   line-height: 15px;
    height: 21px;
    
   
 }
 
-.Nav-dropdown{
-    display: none;
-}
-
-
-
-
 
 @media (max-width: 950px){
-    /* .navigation{
-        
-    } */
+    .home_nav{
+        font-size: 14px;
+    } 
     .title2{
         display: none;
     }
-   
-    
-   
-   
-   
-    /* .Nav-dropdown{
-        display: initial;
-    } */
     .title1{
         color: White;
         font-size: 20px;
         margin: 0px;
      }
-     .submit-input{
-       all: initial;
-       cursor: pointer;
-       border-top-right-radius: 3px;
-       border-bottom-right-radius: 3px;
-       color: white;
-       background-color: orange;
-       padding: 3px;
-       padding-bottom: 11px;
-       height: 11px;
-       
-      
-    }
-    #header_input{
+     #header_input{
         width: 292px;
-        height: 11px;
-        padding: 6px;
+        height: 21px;
+        padding: 14px;
+        padding-top: 15px;
         line-height: 15px;
         font-size: 15px;
         border-top-left-radius: 3px;
@@ -103,76 +102,55 @@
         margin-right: 0px;
         
     }
+    
+    .submit-input{
+       all: initial;
+       cursor: pointer;
+       border-top-right-radius: 3px;
+       border-bottom-right-radius: 3px;
+       color: white;
+       background-color: orange;
+       padding: 5px;
+       line-height: 15px;
+       height: 21px;
+       
+      
+    }
 }
 
 @media (max-width: 550px){
-    .submit-input{
-        all: initial;
-        cursor: pointer;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        color: white;
-        background-color: orange;
-        padding: 3px;
-        padding-bottom: 11px;
-        height: 11px;
-        
-       
-     }
+    
      #header_input{
-         max-width: 150px;
-         height: 11px;
-         padding: 6px;
-         line-height: 15px;
-         font-size: 15px;
-         border-top-left-radius: 3px;
-         border-bottom-left-radius: 3px;
-         vertical-align: middle;
-         margin-right: 0px;
-         
-     }
-}
-    /* 
-    
-    
-
-  a.navlinks-dropdown{
-  
-  display: block;
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-}
-.dropdown-container{
-    text-align: center;
-    display: block;
-    margin-top: 0;
-    position: absolute;
-    background: black;
-    width: 100%;
-    padding-bottom: 75px;
-}
-
-
-
-
-.nav-icon{
-  display: initial;
-  float: left;
-  margin-left: 5px;
-      
-  }
-  
-.bar1, .bar2, .bar3 {
-      width: 20px;
-      height: 3px;
-      background-color: black;
-      margin: 3px 0;
-      transition: 0.4s;
+        width: 150px;
+        height: 21px;
+        padding: 14px;
+        padding-top: 15px;
+        line-height: 15px;
+        font-size: 15px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        vertical-align: middle;
+        margin-right: 0px;
+        
     }
-  */
+    
+    .submit-input{
+       all: initial;
+       cursor: pointer;
+       border-top-right-radius: 3px;
+       border-bottom-right-radius: 3px;
+       color: white;
+       background-color: orange;
+       padding: 5px;
+       line-height: 15px;
+       height: 21px;
+       
+      
+    }
+}
+
+
+ 
+
   
   

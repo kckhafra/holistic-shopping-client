@@ -7,22 +7,35 @@
 .prodpage_container{
     background-repeat: no-repeat;
     background-color: white;
-    position: relative;
     margin-bottom: 100px;
     margin-top: 0;
-    overflow: hidden;
     padding-top: 20px;
     margin: 5px;
     padding: 20px 0 15px 0;
     box-sizing: border-box;
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     
 }
+
+
 .Prod_info{
     display: inline-block;
     margin-left: 10px;
     margin-left: 50px;
-    width: 400px;
+    max-width: 400px;
+}
+@media(max-width:725px){
+    .prod_img{
+        width: 150px;
+    }
+    .Prod_info{
+        font-size: 14px;
+    }
+}
+@media(max-width: 506px){
+    .prodpage_container{
+        justify-content: center;
+    }
 }

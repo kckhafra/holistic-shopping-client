@@ -42,8 +42,6 @@ export default class Header extends React.Component{
         return(
             
             <div className="homenav_container">
-                
-                
                 <div className="nav_container">
                     <header className="header">
                         <h1 className="title1">
