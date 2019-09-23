@@ -14,7 +14,6 @@ export default class Header extends React.Component{
     handleSubmit = (e)=>{
         e.preventDefault()
         const search_term = e.target.search_term.value
-        console.log(search_term)
 
         ProductsService.getGuestProductsSearch(
             search_term
