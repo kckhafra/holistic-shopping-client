@@ -1,5 +1,6 @@
 import React from 'react';
 import RegistrationForm from '../../Components/RegistrationForm/RegistrationForm'
+import NoSearchHeader from '../../Components/Header/NoSearchHeader'
 
 export default class RegistrationPage extends React.Component {
     handleRegistrationSuccess = (user)=>{
@@ -10,7 +11,7 @@ export default class RegistrationPage extends React.Component {
     render() {
       return (
         <section className='RegistrationPage'>
-          
+          <NoSearchHeader/>
           <RegistrationForm
             onRegistrationSuccess={this.handleRegistrationSuccess}
             history={this.props.history}/>

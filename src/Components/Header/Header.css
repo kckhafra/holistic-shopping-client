@@ -34,7 +34,7 @@
 }
 
 .homelink_container{
-    display: flex;
+    display: none;
     justify-content: flex-end;
     flex-wrap: wrap;
 }
@@ -44,7 +44,7 @@
     color: white;
     overflow-wrap:break-word ; 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 
@@ -76,14 +76,104 @@
   
 }
 
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: relative;
+    width: 36px;
+    height: 30px;
+    
+  }
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+  padding-right: 5px;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  padding: 5px;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.menu-item{
+    text-decoration: none;
+    color: white;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media (min-width: 950px){
+    .bm-burger-button {
+       display: none;
+      }
+}
+
+@media (min-width: 950px){
+    .homelink_container{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+}
 
 @media (max-width: 950px){
+    
     .home_nav{
         font-size: 14px;
     } 
     .title2{
         display: none;
     }
+    
     .title1{
         color: White;
         font-size: 20px;
@@ -118,7 +208,12 @@
     }
 }
 
-@media (max-width: 550px){
+
+@media (max-width: 570px){
+    .bm-burger-button {
+        width: 30px;
+        height: 24px;
+       }
     
      #header_input{
         width: 150px;

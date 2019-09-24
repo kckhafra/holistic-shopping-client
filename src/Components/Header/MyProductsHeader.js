@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import './Header.css'
 import TokenService from '../../services/token-service'
 import ProductsService from '../../services/products-api-services'

@@ -15,7 +15,10 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
+}
+.prod_button2{
+    margin-top: 50px;
 }
 
 @media(max-width:725px){

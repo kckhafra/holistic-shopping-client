@@ -4,7 +4,7 @@ import './Header.css'
 import TokenService from '../../services/token-service'
 import ProductsService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
-
+import { slide as Menu } from 'react-burger-menu'
 
 
 export default class Header extends React.Component{
@@ -29,8 +29,10 @@ export default class Header extends React.Component{
 
     handleLogoutButton = ()=>{
         TokenService.clearAuthToken()
+        this.props.history.push("/")
         
     }
+   
 
     componentWillUnmount(){
         this.context.clearGuestProduct()
@@ -41,8 +43,12 @@ export default class Header extends React.Component{
         return(
             
             <div className="homenav_container">
+                
                 <div className="nav_container">
+                    
+
                     <header className="header">
+                        
                         <h1 className="title1">
                         <Link 
                         className="link_title1"
@@ -56,6 +62,18 @@ export default class Header extends React.Component{
                         </form>
                         
                             <h2 className="title2">Shop holistic goods</h2>
+                            <div>
+                        <Menu 
+                            right
+                            pageWrapId={ "page-wrap" }
+                            >
+                            <a id="home" className="menu-item" href="/">Home</a>
+                            <a id="about" className="menu-item" href="/addProduct">Add Product</a>
+                            <a id="contact" className="menu-item" href="/myProducts">My Products</a>
+                            <a id="contact" className="menu-item" href="/">Products for Sale</a>
+                            <a onClick={ this.handleLogoutButton } className="menu-item" href="/">Logout</a>
+                        </Menu>
+                    </div>
                     </header>
                     
                     <div className="homelink_container">
@@ -103,6 +121,7 @@ export default class Header extends React.Component{
           
             <div className="nav_container">
                 
+                
                 <header className="header">
                 <h1 className="title1">
                         <Link 
@@ -116,7 +135,20 @@ export default class Header extends React.Component{
                         <input type="submit" className="submit-input" value="Search" ></input>
                     </form>
                     
-                        <h2 className="title2">Shop holistic goods</h2>
+                    <h2 className="title2">Shop holistic goods</h2>
+
+                     <div>   
+                    <Menu 
+                        right
+                        pageWrapId={ "page-wrap" }
+                        >
+                        <a id="home" className="menu-item" href="/">Home</a>
+                        <a id="register" className="menu-item" href="/register">Register</a>
+                        <a id="login" className="menu-item" href="/login">Login</a>
+                        
+                    </Menu>
+                    </div>
+                
                 </header>
                     
                     <div className="homelink_container">
@@ -141,10 +173,11 @@ export default class Header extends React.Component{
         )
     }
    
+
     render(){
         return(
             <nav className='navigation'>
-                
+               
                 
                 {TokenService.hasAuthToken()
                     ? this.renderLogoutLink()

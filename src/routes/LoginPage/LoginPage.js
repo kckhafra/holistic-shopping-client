@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginForm from '../../Components/LoginForm/LoginForm'
+import NoSearchHeader from '../../Components/Header/NoSearchHeader'
 import './LoginPage.css'
 
 
@@ -12,22 +13,21 @@ export default class LoginPage extends React.Component{
       }
 
     render(){
-        return(
-            <section className='LoginPage'>
-                <header className="login_header">
-                    <h1 className="login_title">
-                        Holisitic Health
-                    </h1>
-                </header>
-                <div className="login-container">
-                    <h2>Login</h2>
-                    <LoginForm
-                        history={this.props.history}
-                        onLoginSuccess={this.handleLoginSuccess}>
-                    </LoginForm>
-                </div>
+        return( 
+            <div>
+                <NoSearchHeader/>
+                <section className='LoginPage'>
                     
-            </section>
+                    <div className="login-container">
+                        <h2>Login</h2>
+                        <LoginForm
+                            history={this.props.history}
+                            onLoginSuccess={this.handleLoginSuccess}>
+                        </LoginForm>
+                    </div>
+                        
+                </section>
+            </div>
         )
     }
 }

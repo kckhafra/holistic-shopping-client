@@ -65,12 +65,14 @@ export default class ProductPage extends React.Component{
                                 >Buy</button> */}
                             </div>
                             </div>
+                            <div className="prodButton_container">
                                 <button
                                 className="prod_button2" 
                                 onClick={this.handleCancelClick}
                                 type="button">
                                     Cancel
                                 </button>
+                            </div>
                             </div>
                         
                             )

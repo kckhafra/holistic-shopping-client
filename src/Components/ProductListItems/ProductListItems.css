@@ -30,6 +30,7 @@
     box-sizing: border-box;
     display: block;
     width: 385px;
+    height: 300px;
     text-align: center;
     
 }
@@ -52,8 +53,8 @@ a.prod_links{
     color: red;
 }
 .prod_img{
-    width: 385px;
-    height: 250px;
+    width: 285px;
+    
 }
 
 .item_button{
@@ -74,6 +75,4 @@ a.ProductItem_Buy{
     font-size: 18px;
 }
 
-.prod_img{
-    width: 50%;
-}
+
