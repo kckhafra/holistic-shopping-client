@@ -1,7 +1,7 @@
 import React from 'react';
 import productsApiServices from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
-import Header from '../../Components/Header/Header'
+import NoSearchHeader from '../../Components/Header/NoSearchHeader'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 import './MyProductPage.css'
@@ -74,7 +74,7 @@ export default class MyProductPage extends React.Component{
         
         return(
             <div>
-                <Header />
+                <NoSearchHeader />
                 <div className = "myProdList_container">
                 <h2>Manage Your Products</h2>
                 <div >

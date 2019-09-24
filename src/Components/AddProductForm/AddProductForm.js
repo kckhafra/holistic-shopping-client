@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 
 
 
-class AddProductPage extends React.Component{
+class AddProductForm extends React.Component{
     
      
     state = {error: null}
@@ -136,4 +136,4 @@ class AddProductPage extends React.Component{
         )
     }
 }
-export default withRouter(AddProductPage)
+export default withRouter(AddProductForm)

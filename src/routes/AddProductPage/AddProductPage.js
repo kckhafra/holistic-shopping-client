@@ -1,6 +1,6 @@
 import React from 'react'
 import AddProductForm from '../../Components/AddProductForm/AddProductForm'
-import Header from '../../Components/Header/Header'
+import NoSearchHeader from '../../Components/Header/NoSearchHeader'
 
 
 class AddProductPage extends React.Component{
@@ -19,7 +19,7 @@ class AddProductPage extends React.Component{
     render(){
         return(
             <section className="">
-            <Header />
+            <NoSearchHeader />
             <AddProductForm
                 onLoginSuccess={this.loginSuccess}/>
             </section>

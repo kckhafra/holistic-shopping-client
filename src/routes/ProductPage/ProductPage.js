@@ -2,7 +2,7 @@ import React from 'react';
 import productsApiServices from '../../services/products-api-services'
 import ProductContext from '../../contexts/ProductContext'
 import './ProductPage.css'
-import Header from '../../Components/Header/Header'
+import Header from '../../Components/Header/NoSearchHeader'
 
 
 
@@ -59,9 +59,10 @@ export default class ProductPage extends React.Component{
                             <h4 className="price">{`$${product.price}`}</h4> 
                             <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
                             <h4> {" "}<span>{product.product_category}</span></h4>
-                                <button
+                            
+                                {/* <button
                                 onClick={this.handleBuy}
-                                >Buy</button>
+                                >Buy</button> */}
                             </div>
                             </div>
                                 <button

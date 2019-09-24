@@ -5,26 +5,9 @@ import TokenService from '../../services/token-service'
 import ProductsService from '../../services/products-api-services'
 import ProductListContext from '../../contexts/ProductListContext'
 
-
-
 export default class Header extends React.Component{
 
     static contextType = ProductListContext
-
-    handleSubmit = (e)=>{
-        e.preventDefault()
-        const search_term = e.target.search_term.value
-        
-        ProductsService.getGuestProductsSearch(
-            search_term
-        )
-        .then(this.context.setGuestProductList
-            
-            )
-            
-    }
-    
-    
 
 
     handleLogoutButton = ()=>{
@@ -32,9 +15,6 @@ export default class Header extends React.Component{
         
     }
 
-    componentWillUnmount(){
-        this.context.clearGuestProduct()
-    }
 
     renderLogoutLink(){
         
@@ -48,14 +28,7 @@ export default class Header extends React.Component{
                         className="link_title1"
                         to="/">Holistic Health</Link>
                         </h1>
-                        <form 
-                            onSubmit={this.handleSubmit}
-                            id="header_search">
-                            <input id="header_input" name="search_term"></input>
-                            <input type="submit" className="submit-input" value="Search" ></input>
-                        </form>
                         
-                            <h2 className="title2">Shop holistic goods</h2>
                     </header>
                     
                     <div className="homelink_container">
@@ -94,31 +67,16 @@ export default class Header extends React.Component{
     renderLoginLink(){
         
         return (
-            
-                <div className="homenav_container">
-                    {/* <SmallHeaderLogin
-                        onSubmit={this.handleSubmit}
-                        onLogout={this.handleLogoutButton}/> */}
-                        
-          
+            <div className="homenav_container">     
             <div className="nav_container">
-                
                 <header className="header">
                 <h1 className="title1">
                         <Link 
                         className="link_title1"
                         to="/">Holistic Health</Link>
                         </h1>
-                    <form 
-                        onSubmit={this.handleSubmit}
-                        id="header_search">
-                        <input id="header_input" name="search_term"></input>
-                        <input type="submit" className="submit-input" value="Search" ></input>
-                    </form>
-                    
-                        <h2 className="title2">Shop holistic goods</h2>
+
                 </header>
-                    
                     <div className="homelink_container">
                         <div>
                         <Link

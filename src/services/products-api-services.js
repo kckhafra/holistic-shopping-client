@@ -41,8 +41,8 @@ const ProductApiService = {
                 : res.json()
             )
     },
-    getMyProducts(){
-        return fetch(`${config.API_ENDPOINT}/products/my`,{
+    getMyProducts(searchTerm){
+        return fetch(`${config.API_ENDPOINT}/products/my?search_term=${searchTerm}`,{
             
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
