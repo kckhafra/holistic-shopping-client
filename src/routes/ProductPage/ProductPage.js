@@ -59,6 +59,7 @@ export default class ProductPage extends React.Component{
                             <h4 className="price">{`$${product.price}`}</h4> 
                             <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
                             <h4> {" "}<span>{product.product_category}</span></h4>
+                            <p>{product.description}</p>
                             
                                 {/* <button
                                 onClick={this.handleBuy}

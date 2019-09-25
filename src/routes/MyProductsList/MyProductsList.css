@@ -17,6 +17,7 @@
     flex-wrap: wrap;
 }
 
+
 @media (max-width: 859px){
     .productListPage_itemContainer{
         margin: 20px;

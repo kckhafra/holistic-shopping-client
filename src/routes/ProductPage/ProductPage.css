@@ -21,27 +21,30 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    overflow: auto;
     
 }
 
 
 .Prod_info{
     display: inline-block;
-    margin-left: 10px;
     margin-left: 50px;
     max-width: 400px;
+    padding-left: 20px;
 }
-@media(max-width:725px){
+@media(max-width:805px){
     .prod_img{
-        width: 150px;
+        height: 150px;
+        min-height: 150px;
     }
     .Prod_info{
         font-size: 14px;
+        margin-left: 0px;
     }
 }
 @media(max-width: 506px){
     .prodpage_container{
-        justify-content: center;
+        
     }
 }

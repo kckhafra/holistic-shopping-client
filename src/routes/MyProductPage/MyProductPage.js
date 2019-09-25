@@ -82,11 +82,11 @@ export default class MyProductPage extends React.Component{
                     
                         return(
                         <div key={uuid}>
-                            <div className="myProduct_item_container">
+                            <div className="prodpage_container">
                                
-                        <img className="myProd_img" src={`${product.images}`} alt="seller images"/>
+                        <img className="prod_img" src={`${product.images}`} alt="seller images"/>
 
-                       <div className="myProd_info"> 
+                       <div className="Prod_info"> 
                             <header className='ProductItem_header'>
                                 <h2 className='productItem_h2'>
                                 {product.service_name}
@@ -94,7 +94,8 @@ export default class MyProductPage extends React.Component{
                             </header>
                             <h4 className="price">{`$${product.price}`}</h4> 
                             <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
-                            <h4> {" "}<span>{product.product_category}</span></h4>
+                            <h4> {product.product_category}</h4>
+                            <p>{product.description}</p>
                         
                                 <button
                                     onClick={this.handleClickDelete}

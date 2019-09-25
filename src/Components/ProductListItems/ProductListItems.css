@@ -24,7 +24,9 @@
     box-sizing: border-box;
     display: block;
     width: 385px;
-    height: 400px;
+    
+    
+    
     text-align: center;
     
 }
@@ -32,7 +34,7 @@
     text-transform: uppercase;
 }
 .border{
-    border-right: solid lightgray;
+    border-right: solid lightgray 1px;
 }
 a.prod_links{
     
@@ -47,7 +49,8 @@ a.prod_links{
     color: red;
 }
 .prod_img{
-    width: 245px;
+   height: 245px;
+   min-height: 245px;
     
 }
 
@@ -68,5 +71,7 @@ a.ProductItem_Buy{
     padding: 5px;
     font-size: 18px;
 }
+
+
 
 
