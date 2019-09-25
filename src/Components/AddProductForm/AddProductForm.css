@@ -30,3 +30,18 @@
  .label_image{
      margin-right: 100px;
  }
+ .label_description{
+     margin-right: 160px;
+ }
+
+ @media(max-width: 406px){
+     .addProd_container{
+         display: flex;
+         flex-direction: column;
+
+     }
+     .label_addprod{
+        display: block;
+        margin: 0px;
+     }
+ }

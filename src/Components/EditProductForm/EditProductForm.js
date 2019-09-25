@@ -175,7 +175,7 @@ export default class EditReact extends React.Component{
                         <label 
                             className="label_addprod label_description"
                             htmlFor='add_description'>
-                            Description and Health Benefits
+                            Description 
                         </label>
                         <input
                             onChange={this.handleChangeDescription}

@@ -82,10 +82,10 @@ export default class Header extends React.Component{
         return (
             <div className="homenav_container">     
             <div className="nav_container">
-                <header className="header">
-                    <h1 className="title1">
+                <header className="noheader">
+                    <h1 className="no_title1">
                         <Link 
-                        className="link_title1"
+                        className="nolink_title1"
                         to="/">Holistic Health</Link>
                     </h1>
 

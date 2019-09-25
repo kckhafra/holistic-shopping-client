@@ -11,26 +11,20 @@
 } */
 
 .product_item_container{
-    
+    box-sizing: border-box;
     background-repeat: no-repeat;
     background-color: white;
-    /* background: linear-gradient(
-        rgba(75, 70, 70, 0.5),
-        rgba(75, 70, 70, 0.5)
-      ),
-      url("https://inhabitat.com/wp-content/blogs.dir/1/files/2013/08/leaf-veins.jpg");
-    height: 100%; */
     position: relative;
     margin-bottom: 0;
     margin-top: 0;
-    overflow: hidden;
+    overflow: auto;
     padding-top: 20px;
     margin: 5px;
     padding: 20px 0 15px 0;
     box-sizing: border-box;
     display: block;
     width: 385px;
-    height: 300px;
+    height: 400px;
     text-align: center;
     
 }
@@ -53,7 +47,7 @@ a.prod_links{
     color: red;
 }
 .prod_img{
-    width: 285px;
+    width: 245px;
     
 }
 

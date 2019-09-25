@@ -1,3 +1,31 @@
+.noheader{ 
+    padding: 10px;
+    color: white;
+    overflow-wrap:break-word ; 
+    
+    
+}
+
 .noSearch_menu{
-    float: right;
+    position:absolute;
+    top: 5px;
+    right: 0px;
+    
+}
+a.nolink_title1{
+    text-decoration: none;
+    color: White;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.no_title1{
+    color: white;
+}
+@media (max-width: 408px){
+    .noSearch_menu{
+        position:absolute;
+        top: 2px;
+        right: 0px;
+    }
 }

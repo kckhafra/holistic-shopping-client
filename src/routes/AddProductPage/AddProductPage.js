@@ -18,11 +18,11 @@ class AddProductPage extends React.Component{
 
     render(){
         return(
-            <section className="">
+            <div>
             <NoSearchHeader />
             <AddProductForm
                 onLoginSuccess={this.loginSuccess}/>
-            </section>
+            </div>
 
         )
     }

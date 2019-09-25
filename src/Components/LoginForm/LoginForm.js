@@ -52,13 +52,14 @@ export default class LoginForm extends React.Component{
                     <div role="alert">
                         {error && <p className='error'>{error}</p>}
                     </div>
+                    
                     <div className='user_name'>
                     <label 
                         className="log_label label_username"
                         htmlFor='LoginForm__user_name'>
                         User name
                     </label>
-                    <input
+                    <input class="log_username"
                     type="text"
                         required
                         name='user_name'
@@ -73,13 +74,14 @@ export default class LoginForm extends React.Component{
                         Password
                     </label>
                     <input
+                        className="log_password"
                         required
                         name='password'
                         type='password'
                         id='LoginForm__password'>
                     </input>
                     </div>
-                    <div >
+                    <div className="logbutton_container">
                     <button 
                         
                         className="log_button log_button1"
