@@ -33,7 +33,7 @@ This web app currently allows you to post products for sell and see products oth
 ![Your Product List](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-26%20at%2011.50.18%20AM.png)
 
 ## Manage Product
-![Manage Product](https://github.com/kckhafra/holistic-shopping-client/blob/master/Pictures/Screen%20Shot%202019-09-26%20at%2011.50.18%20AM.png)
+![Manage Product](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-26%20at%2011.50.25%20AM.png)
 
 
 
