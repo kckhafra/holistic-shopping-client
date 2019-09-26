@@ -42,8 +42,6 @@ export default class Home extends React.Component {
   }
 
     render(){
-      
-      console.log(this.context.guestProducts)
     return (
       <div className="Home">
             <Header
