@@ -17,7 +17,6 @@ export default class LoginPage extends React.Component{
             <div>
                 <NoSearchHeader/>
                 <section className='LoginPage'>
-                    
                     <div className="login-container">
                         <h2>Login</h2>
                         <LoginForm
