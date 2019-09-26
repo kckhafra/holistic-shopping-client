@@ -17,7 +17,8 @@ Front-end: The front end was built with JavaScript, React, HTML, CSS, AND API GE
 This web app currently allows you to post products for sell and see products others post. You can also manage your own products by either editing or deleting your product. All products are stored in a database created by PSQL.  
 
 ## Home Page
-![Login Page](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.46.40%20PM.png)
+
+![Home Page](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-26%20at%2011.48.57%20AM.png)
 
 ## Registration Page
 ![Registration Page](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-05%20at%204.50.25%20PM.png)
