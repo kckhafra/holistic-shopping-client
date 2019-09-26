@@ -10,6 +10,8 @@ const uuid = require('uuid')
 export default class Home extends React.Component {
   static contextType = ProductListContext
 
+  state = {error:null}
+
     componentDidMount(){
         ProductsApiService.getGuestProducts()
             .then(
@@ -17,7 +19,7 @@ export default class Home extends React.Component {
               )
             
             .catch(error =>{
-                console.log({error});
+              console.log(error)
             })
     }
 
@@ -40,6 +42,8 @@ export default class Home extends React.Component {
   }
 
     render(){
+      
+      console.log(this.context.guestProducts)
     return (
       <div className="Home">
             <Header
@@ -51,9 +55,9 @@ export default class Home extends React.Component {
         <p className="home_p">Buy And Sell Products That Nourish The Whole Body. </p>
         <div className="logo_container">
                     <section className="prodSale_container"> 
-                        {this.context.guestProducts.length > 0
-                          ? this.renderProductsList()
-                          :this.renderNoProducts()}
+                        {this.context.guestProducts.length <= 0 || this.context.guestProducts === [""]
+                          ? this.renderNoProducts()
+                          :this.renderProductsList()}
                    
                     </section>
                     </div>
