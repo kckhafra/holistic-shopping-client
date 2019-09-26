@@ -39,6 +39,7 @@ This web app currently allows you to post products for sell and see products oth
 
 ## Your Product List
 - Your product page list all the products you have added to your account. You can manage your products by clicking on a specific product. 
+- Users can also search their products using the search bar. Once users enter a search term, all products in your product repository that match the search term will be displayed on this page. 
 ![Your Product List](https://raw.githubusercontent.com/kckhafra/holistic-shopping-client/master/Pictures/Screen%20Shot%202019-09-26%20at%2011.50.18%20AM.png)
 
 ## Manage Product
