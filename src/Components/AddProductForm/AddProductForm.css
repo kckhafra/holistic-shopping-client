@@ -33,6 +33,26 @@
  .label_description{
      margin-right: 160px;
  }
+ .select-category{
+     
+     display: inline-block;
+     
+ }
+ .label_category{
+     margin-right: 170px;
+ }
+ .select-category select{
+    
+    background-color:white;
+    margin: 5px;
+    width: 150px;
+    height: 21px;
+    border: 1px orange solid;
+    cursor: pointer;
+    
+ }
+ 
+ 
 
  @media(max-width: 406px){
      .addProd_container{

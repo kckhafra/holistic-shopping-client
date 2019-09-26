@@ -105,15 +105,16 @@ class AddProductForm extends React.Component{
                             htmlFor='add_category'>
                             Category
                         </label>
-                        
-                        <select name="category">
-                            <option default value='Tea'>Tea</option>
-                            <option value='Pills'>Pills</option>
-                            <option value='Counseling'>Counseling</option>
-                            <option value='Plant-based'>Plant-based</option>
-                            <option value='Body-care'>Body-care</option>
-                            <option value='Recipes'>Recipes</option>
-                        </select>
+                        <div className="select-category">
+                            <select name="category">
+                                <option default value='Tea'>Tea</option>
+                                <option value='Pills'>Pills</option>
+                                <option value='Counseling'>Counseling</option>
+                                <option value='Plant-based'>Plant-based</option>
+                                <option value='Body-care'>Body-care</option>
+                                <option value='Recipes'>Recipes</option>
+                            </select>
+                        </div>
                         
                     </div>
                     <div className="button_container">

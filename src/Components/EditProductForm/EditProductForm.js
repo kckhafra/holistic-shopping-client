@@ -201,16 +201,17 @@ export default class EditReact extends React.Component{
                     </div>
                     <div className="input_container">
                         <label 
-                            className="label_addprod label_product_category"
+                            className="label_addprod label_category"
                             htmlFor='add_product_category'>
-                            Product Category
+                             Category
                         </label>
-                        
-                        <select 
-                        onChange={this.handleChangeCategory}
-                        name="product_category">
-                            {options}
-                        </select>
+                        <div className="select-category">
+                            <select 
+                            onChange={this.handleChangeCategory}
+                            name="product_category">
+                                {options}
+                            </select>
+                        </div>
                         
                     </div>
                     <div className="button_container">
