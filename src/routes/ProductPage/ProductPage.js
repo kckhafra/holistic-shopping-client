@@ -49,23 +49,31 @@ export default class ProductPage extends React.Component{
                         return(
                         <div key={uuid}>
                             <div className="prodpage_container">
-                            <img className="prod_img" src={`${product.images}`} alt="seller images"/>
-                            <div className="Prod_info"> 
-                            <header className='ProductItem_header'>
-                                <h2 className='productItem_h2'>
-                                {product.service_name}
-                                </h2>
-                            </header>
-                            <h4 className="price">{`$${product.price}`}</h4> 
-                            <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
-                            <h4> {" "}<span>{product.product_category}</span></h4>
-                            <p>{product.description}</p>
+                                <img className="prod_img" src={`${product.images}`} alt="seller images"/>
+                                <div className="Prod_info"> 
+                                <header className='ProductItem_header'>
+                                    <h2 className='productItem_h2'>
+                                    {product.service_name}
+                                    </h2>
+                                </header>
+                                <h4 className="price">{`$${product.price}`}</h4> 
+                                <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
+                                <h4> {" "}<span>{product.product_category}</span></h4>
+                                <p>{product.description}</p>
+                                
+                                
+                                
+                                    {/* <button
+                                    onClick={this.handleBuy}
+                                    >Buy</button> */}
+                                </div>
+                            </div>
                             
-                                {/* <button
-                                onClick={this.handleBuy}
-                                >Buy</button> */}
-                            </div>
-                            </div>
+                                <div className="seller-container">
+                                    <p>Seller: {" "} <span>{product.full_name}</span></p> 
+                                    <p className="seller-email">Email:{" "} <span>{product.email}</span></p>
+                                </div>
+                            
                             <div className="prodButton_container">
                                 <button
                                 className="prod_button2" 

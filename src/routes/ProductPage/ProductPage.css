@@ -32,6 +32,22 @@
     margin-left: 50px;
     max-width: 400px;
     padding-left: 20px;
+    margin-left: 0px;
+    
+}
+.seller-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    font-size: 12px;
+    overflow-wrap: wrap; 
+    overflow: auto;
+}
+.seller-email{
+    padding-left: 5px;
+    margin-left: 5px;
+    
 }
 @media(max-width:805px){
     .prod_img{
@@ -43,8 +59,17 @@
         margin-left: 0px;
     }
 }
-@media(max-width: 506px){
-    .prodpage_container{
+@media(max-width: 230px){
+    .seller-container{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+       
+       
+    }
+    .seller-email{
+        padding-left: 0px;
+        margin-left: 0px;
         
     }
 }
