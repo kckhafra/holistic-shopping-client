@@ -43,9 +43,8 @@ export default class MyProductPage extends React.Component{
 
     handleClickDelete = (e)=>{
         e.preventDefault()
+        if (window.confirm("Are you sure you want to delete this product?")){
         const {productId} = this.props.match.params
-        
-        
         fetch(`${config.API_ENDPOINT}/products/${productId}`,{
             method: 'DELETE',
             headers: {
@@ -63,6 +62,7 @@ export default class MyProductPage extends React.Component{
         .catch(error=>{
             console.log({error})
         })
+        }
     }
 
 
