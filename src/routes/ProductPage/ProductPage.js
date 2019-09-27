@@ -71,7 +71,7 @@ export default class ProductPage extends React.Component{
                             
                                 <div className="seller-container">
                                     <p>Seller: {" "} <span>{product.full_name}</span></p> 
-                                    <p className="seller-email">Email:{" "} <span>{product.email}</span></p>
+                                    <p className="seller-email"> <a href={`mailto:${product.email}`} >Email:{" "} <span>{product.email}</span></a></p>
                                 </div>
                             
                             <div className="prodButton_container">
