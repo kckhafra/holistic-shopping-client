@@ -110,7 +110,7 @@ export default class EditReact extends React.Component{
     
 
     gernerateOptionsHTML(){
-        return ['Tea','Pills','Counselling','Plant-based','Body-care','Recipes'].map((categ, uuid) => {
+        return ['Tea','Pills','Counseling','Plant-based','Body-care','Recipes'].map((categ, uuid) => {
             if (categ === this.state.product_category) {
               return <option selected key={uuid} value={categ}>{categ}</option>
             }
