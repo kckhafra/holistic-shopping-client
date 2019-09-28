@@ -12,6 +12,7 @@ export default class ProductListItems extends React.Component{
             <div className="product_item_container">
                 <div className="border">
                 <Link 
+                    aria-label="More information about product and the seller of the product"
                     className="prod_links"
                     to={`/product/${product.id}`}>
                     
@@ -24,9 +25,9 @@ export default class ProductListItems extends React.Component{
                             {product.service_name}
                         </h2>
                     </header>
-                    <h4 className="price">{`$${product.price}`}</h4> 
-                    <h4>There are {" "}<span>{product.remaining_inventory}</span> remaining</h4>
-                    <h4> {" "}<span>{product.product_category}</span></h4>
+                    <h3 className="price">{`$${product.price}`}</h3> 
+                    <h3>There are {" "}<span>{product.remaining_inventory}</span> remaining</h3>
+                    <h3> {" "}<span>{product.product_category}</span></h3>
                     
                     
                 </div>

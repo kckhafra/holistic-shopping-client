@@ -57,7 +57,7 @@ export default class Header extends React.Component{
                         <form 
                             onSubmit={this.handleSubmit}
                             id="header_search">
-                            <input id="header_input" name="search_term"></input>
+                            <input id="header_input" name="search_term" title="search_term"></input>
                             <input type="submit" className="submit-input" value="Search" ></input>
                         </form>
                         
@@ -68,9 +68,9 @@ export default class Header extends React.Component{
                             pageWrapId={ "page-wrap" }
                             >
                             <a id="home" className="menu-item" href="/">Home</a>
-                            <a id="about" className="menu-item" href="/addProduct">Add Product</a>
-                            <a id="contact" className="menu-item" href="/myProducts">My Products</a>
-                            <a id="contact" className="menu-item" href="/">Products for Sale</a>
+                            <a id="add-product" className="menu-item" href="/addProduct">Add Product</a>
+                            <a id="my-product" className="menu-item" href="/myProducts">My Products</a>
+                            <a id="products-sale" className="menu-item" href="/">Products for Sale</a>
                             <a onClick={ this.handleLogoutButton } className="menu-item" href="/">Logout</a>
                         </Menu>
                     </div>
