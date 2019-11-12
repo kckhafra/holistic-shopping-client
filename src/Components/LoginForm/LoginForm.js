@@ -32,8 +32,6 @@ export default class LoginForm extends React.Component{
         .catch(res=>{
             this.setState({error: res.error})
         })
-
-
         user_name.value = ''
         password.value = ''
     }
